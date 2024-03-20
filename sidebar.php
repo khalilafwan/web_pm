@@ -83,7 +83,7 @@
             <?php } ?> -->
             <li>
                 <a href="konsesi.php">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-window-maximize"></i>
                     <span>Konsesi</span>
                 </a>
             </li>

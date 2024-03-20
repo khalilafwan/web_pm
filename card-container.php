@@ -119,7 +119,7 @@
                         </span>
                         <span class="amount-value">Konsesi</span>
                     </div>
-                    <i class="fas fa-user icon"></i>
+                    <i class="fas fa-window-maximize icon"></i>
                 </div>
             </a>
 
@@ -131,7 +131,7 @@
                         </span>
                         <span class="amount-value">Input Konsesi</span>
                     </div>
-                    <i class="fas fa-user icon"></i>
+                    <i class="fas fa-pen-to-square icon"></i>
                 </div>
             </a>
         </div>
