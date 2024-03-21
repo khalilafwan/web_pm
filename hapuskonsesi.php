@@ -1,6 +1,7 @@
 <?php
     require 'fungsi.php';
 
+    
     $id = $_GET["id_konsesi"];
 
     if(hapusKonsesi($id)>0){
