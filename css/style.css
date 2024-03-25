@@ -313,8 +313,9 @@ thead th {
   }
 
 th {
-    padding: 15px;
-    text-align: left;
+    padding: 13px;
+    text-align: center;
+    font-size: 14px;
 }
 
 tbody {
