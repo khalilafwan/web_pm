@@ -103,7 +103,7 @@ if (isset($_POST["submit"])) {
                                         <label class="control-label col-sm-4">ID PIC</label>
                                         <div class="col-sm-8">
                                             <input type="text" class="form-control" placeholder="Masukkan PIC"
-                                                name="design_pic">
+                                                name="checker_pic">
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@ if (isset($_POST["submit"])) {
                                         <label class="control-label col-sm-4">START</label>
                                         <div class="col-sm-8">
                                             <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                                placeholder="Masukan Waktu Start" name="design_start">
+                                                placeholder="Masukan Waktu Start" name="checker_start">
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@ if (isset($_POST["submit"])) {
                                         <label class="control-label col-sm-4">END</label>
                                         <div class="col-sm-8">
                                             <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                                placeholder="Masukan Waktu End" name="design_end">
+                                                placeholder="Masukan Waktu End" name="checker_end">
                                         </div>
                                     </div>
                                 </div>
