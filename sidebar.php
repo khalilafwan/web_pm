@@ -66,11 +66,11 @@
                     <h6 class="collapse-header">Edit:</h6>
                     <a class="collapse-item" href="buttons.php">Tables</a>
                     <a class="collapse-item" href="cards.php">Import Project</a>
-                    <a class="collapse-item" href="cards.php">Input Project</a>
-                    <a class="collapse-item" href="cards.php">Input Design</a>
-                    <a class="collapse-item" href="cards.php">Input Nesting</a>
-                    <a class="collapse-item" href="cards.php">Input Program</a>
-                    <a class="collapse-item" href="cards.php">Input Checker</a>
+                    <a class="collapse-item" href="form-project.php">Input Project</a>
+                    <a class="collapse-item" href="form-design.php">Input Design</a>
+                    <a class="collapse-item" href="form-nesting.php">Input Nesting</a>
+                    <a class="collapse-item" href="form-program.php">Input Program</a>
+                    <a class="collapse-item" href="form-checker.php">Input Checker</a>
                     <a class="collapse-item" href="cards.php">Export</a>
 
                 </div>
