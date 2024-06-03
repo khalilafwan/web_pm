@@ -71,8 +71,8 @@ if (isset($_POST["submit"])) {
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Form Program</h1>
-                    <p class="mb-4">Mohon Isi Data Program pada Form di Bawah ini.
+                    <h1 class="h3 mb-2 text-gray-800">Form Checker</h1>
+                    <p class="mb-4">Mohon Isi Data Checker pada Form di Bawah ini.
                     </p>
                     <form method="POST" action="">
 
