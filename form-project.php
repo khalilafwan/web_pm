@@ -46,8 +46,8 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Form Konsesi</h1>
-                    <p class="mb-4">Mohon Isi Data Konsesi pada Form di Bawah ini.
+                    <h1 class="h3 mb-2 text-gray-800">Form Project</h1>
+                    <p class="mb-4">Mohon Isi Data Project pada Form di Bawah ini.
                     </p>
 
 
@@ -58,7 +58,87 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">JO</label>
+                                    <label class="control-label col-sm-4">ID Project</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan ID Project"
+                                            name="id">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">NO JO</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Nomor JO"
+                                            name="no_jo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">TGL JO</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" class="form-control" placeholder="Masukan Tgl JO"
+                                            name="tgl_jo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">NAMA PROJECT</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Nama Project"
+                                            name="nama_project">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">KODE GBJ</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Kode GBJ"
+                                            name="kode_gbj">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">HARGA</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Harga"
+                                            name="nilai_harga">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">NAMA PANEL</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Nama Panel"
+                                            name="nama_panel">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">TIPE JENIS</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Tipe Jenis"
+                                            name="tipe_jenis">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">TIPE FS/WM</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control">
                                     </div>
@@ -67,7 +147,7 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">WO</label>
+                                    <label class="control-label col-sm-4">UNIT</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control">
                                     </div>
@@ -76,7 +156,7 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Nama Project</label>
+                                    <label class="control-label col-sm-4">CELL</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control">
                                     </div>
@@ -85,7 +165,7 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Nama Panel</label>
+                                    <label class="control-label col-sm-4">WARNA</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control">
                                     </div>
@@ -94,7 +174,7 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Unit</label>
+                                    <label class="control-label col-sm-4">NO WO</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control">
                                     </div>
@@ -103,7 +183,52 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jenis</label>
+                                    <label class="control-label col-sm-4">NO SERUI</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">HEIGHT</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">WIDTH</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">DEEP</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">MH STD</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">MH AKTUAL</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control">
                                     </div>
