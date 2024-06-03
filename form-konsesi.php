@@ -49,128 +49,152 @@
                     <h1 class="h3 mb-2 text-gray-800">Form Konsesi</h1>
                     <p class="mb-4">Mohon Isi Data Konsesi pada Form di Bawah ini.
                     </p>
-                    <form class="form-horizontal">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">JO</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
+
+
+                    <div class="row">
+
+                        <!-- Border Left Utilities -->
+                        <div class="col-lg-6">
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">JO</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">WO</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Nama Project</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Nama Panel</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Unit</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Jenis</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
                                 </div>
                             </div>
 
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">WO</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Nama Project</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-4">Nama Panel</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">Unit</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">Jenis</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">Konsesi</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">Jml</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">No. LKPJ</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">Status</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
                         </div>
 
 
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label">TGL Matrial Datang</label>
-                                <div class="col-sm-8">
-                                    <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                        placeholder="Date End">
+
+                        <!-- Border Bottom Utilities -->
+                        <div class="col-lg-6">
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Konsesi</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label">TGL Pasang</label>
-                                <div class="col-sm-8">
-                                    <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                        placeholder="Date End">
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label">Keterangan</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">No. LKPJ</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Status</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">TGL Matrial Datang</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Date End">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">TGL Pasang</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Date End">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Keterangan</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
 
-                        <div class="text-center">
-                            <button class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
-                        </div>
-                        <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
+                    </div>
+                    <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
                     </form>
 
                 </div>
