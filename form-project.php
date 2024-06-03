@@ -259,40 +259,62 @@
                         </div>
 
 
-
                         <!-- Border Right -->
                         <div class="col-lg-6">
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">TGL APPROVED</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="tgl_approved">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">No. LKPJ</label>
+                                    <label class="control-label col-sm-4">TGL RELEASE DWG SOFT COPY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="tgl_release_dwg_softcopy">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Status</label>
+                                    <label class="control-label col-sm-4">TGL RELEASE DWG HARD COPY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="tgl_release_dwg_hardcopy">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">TGL Matrial Datang</label>
+                                    <label class="control-label col-sm-4">BREAKDOWN</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Breakdown"
+                                            name="breakdown">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">BUSBAR</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                            name="busbar">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">BREAKDOWN</label>
                                     <div class="col-sm-8">
                                         <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
                                             placeholder="Date End">
@@ -308,58 +330,64 @@
                                             placeholder="Date End">
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Keterangan</label>
+                                    <label class="control-label col-sm-4">TARGET PPC</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
+                                            name="target_ppc">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">TARGET ENG</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="target_eng">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">TGL BOX SELESAI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
+                                            name="tgl_box_selesai">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">DUE DATE DENGAN CUSTOMER</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="due_date">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">TGL TERBIT WO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
+                                            name="tgl_terbit_wo">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">PLAN START PRODUKSI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="plan_start_produksi">
                                     </div>
                                 </div>
                             </div>
