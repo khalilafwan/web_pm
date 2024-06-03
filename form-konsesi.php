@@ -53,7 +53,7 @@
 
                     <div class="row">
 
-                        <!-- Border Left Utilities -->
+                        <!-- Border Left -->
                         <div class="col-lg-6">
 
                             <div class="card mb-4 py-3">
@@ -110,17 +110,6 @@
                                 </div>
                             </div>
 
-
-
-
-
-                        </div>
-
-
-
-                        <!-- Border Bottom Utilities -->
-                        <div class="col-lg-6">
-
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Konsesi</label>
@@ -129,6 +118,13 @@
                                     </div>
                                 </div>
                             </div>
+
+                        </div>
+
+
+
+                        <!-- Border Right -->
+                        <div class="col-lg-6">
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
