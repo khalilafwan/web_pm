@@ -1,3 +1,28 @@
+<?php
+// include 'header.php';
+require 'fungsi.php';
+//cek apakah tombol sudah ditekan
+if (isset($_POST["submit"])) {
+
+    //cek apakah data berhasil ditambahkan
+    if (inputdata($_POST) > 0) {
+        echo "
+				<script>  
+					alert('Data Berhasil Ditambahkan');
+					document.location.href ='monitoring.php';
+				</script>
+				";
+    } else {
+        echo "
+				<script>  
+					alert('Data Gagal Ditambahkan');
+					document.location.href ='monitoring.php';
+				</script>
+				";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

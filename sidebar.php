@@ -63,8 +63,8 @@
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Edit:</h6>
-                    <a class="collapse-item" href="buttons.php">Tables</a>
+                    <a class="collapse-item" href="tables-monitoring.php">Tables</a>
+                    <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="cards.php">Import Project</a>
                     <a class="collapse-item" href="form-project.php">Input Project</a>
                     <a class="collapse-item" href="form-design.php">Input Design</a>
@@ -87,8 +87,8 @@
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Edit:</h6>
-                    <a class="collapse-item" href="utilities-color.php">Tables</a>
+                    <a class="collapse-item" href="tables-konsesi.php">Tables</a>
+                    <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="form-konsesi.php">Input Data</a>
                     <a class="collapse-item" href="utilities-animation.php">Export</a>
                     <!-- <a class="collapse-item" href="utilities-other.php">Other</a> -->
