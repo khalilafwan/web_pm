@@ -140,7 +140,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TIPE FS/WM</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Tipe FS/WM"
+                                            name="tipe_fswm">
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +150,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">UNIT</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Unit"
+                                            name="qty_unit">
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +160,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">CELL</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Cell"
+                                            name="qty_cell">
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +170,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">WARNA</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Warna"
+                                            name="warna">
                                     </div>
                                 </div>
                             </div>
@@ -176,16 +180,18 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">NO WO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan No WO"
+                                            name="nomor_wo">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">NO SERUI</label>
+                                    <label class="control-label col-sm-4">NO SERI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan No Seri"
+                                            name="nomor_seri">
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +200,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">HEIGHT</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Height"
+                                            name="size_panel_height">
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +210,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">WIDTH</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Width"
+                                            name="size_panel_width">
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +220,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">DEEP</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Deep"
+                                            name="size_panel_deep">
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +230,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">MH STD</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan MH STD"
+                                            name="mh_std">
                                     </div>
                                 </div>
                             </div>
@@ -230,16 +240,18 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">MH AKTUAL</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan MH AKTUAL"
+                                            name="mh_aktual">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Konsesi</label>
+                                    <label class="control-label col-sm-4">TGL SUBMIT DWG FOR APPROVAL</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Tgl"
+                                            name="tgl_submit_dwg_for_approval">
                                     </div>
                                 </div>
                             </div>
