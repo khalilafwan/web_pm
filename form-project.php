@@ -105,8 +105,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL JO</label>
                                     <div class="col-sm-8">
-                                        <input type="date" class="form-control" placeholder="Masukan Tgl JO"
-                                            name="tgl_jo">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukan Tgl JO" name="tgl_jo">
                                     </div>
                                 </div>
                             </div>
@@ -255,8 +255,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">MH STD</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan MH STD"
-                                            name="mh_std">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan MH STD" name="mh_std">
                                     </div>
                                 </div>
                             </div>
@@ -265,8 +265,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">MH AKTUAL</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan MH AKTUAL"
-                                            name="mh_aktual">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan MH AKTUAL" name="mh_aktual">
                                     </div>
                                 </div>
                             </div>
@@ -275,8 +275,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL SUBMIT DWG FOR APPROVAL</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Tgl"
-                                            name="tgl_submit_dwg_for_approval">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan Tgl" name="tgl_submit_dwg_for_approval">
                                     </div>
                                 </div>
                             </div>
@@ -291,8 +291,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL APPROVED</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="tgl_approved">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan TGL APPROVED" name="tgl_approved">
                                     </div>
                                 </div>
                             </div>
@@ -301,8 +301,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL RELEASE DWG SOFT COPY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="tgl_release_dwg_softcopy">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan RELEASE DWG" name="tgl_release_dwg_softcopy">
                                     </div>
                                 </div>
                             </div>
@@ -311,8 +311,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL RELEASE DWG HARD COPY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="tgl_release_dwg_hardcopy">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan RELEASE DWG" name="tgl_release_dwg_hardcopy">
                                     </div>
                                 </div>
                             </div>
@@ -321,8 +321,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">BREAKDOWN</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Breakdown"
-                                            name="breakdown">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan Breakdown" name="breakdown">
                                     </div>
                                 </div>
                             </div>
@@ -331,8 +331,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">BUSBAR</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
-                                            name="busbar">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan Busbar" name="busbar">
                                     </div>
                                 </div>
                             </div>
@@ -361,8 +361,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TARGET PPC</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
-                                            name="target_ppc">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan Target PPC" name="target_ppc">
                                     </div>
                                 </div>
                             </div>
@@ -371,8 +371,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TARGET ENG</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="target_eng">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan Target Eng" name="target_eng">
                                     </div>
                                 </div>
                             </div>
@@ -381,8 +381,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL BOX SELESAI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
-                                            name="tgl_box_selesai">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan TGL BOX" name="tgl_box_selesai">
                                     </div>
                                 </div>
                             </div>
@@ -391,8 +391,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">DUE DATE DENGAN CUSTOMER</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="due_date">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan DUE DATE" name="due_date">
                                     </div>
                                 </div>
                             </div>
@@ -401,8 +401,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL TERBIT WO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
-                                            name="tgl_terbit_wo">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan TGL TERBIT" name="tgl_terbit_wo">
                                     </div>
                                 </div>
                             </div>
@@ -411,8 +411,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">PLAN START PRODUKSI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="plan_start_produksi">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan PLAN START" name="plan_start_produksi">
                                     </div>
                                 </div>
                             </div>
@@ -421,8 +421,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">AKTUAL START PRODUKSI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
-                                            name="aktual_start_produksi">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan AKTUAL START" name="aktual_start_produksi">
                                     </div>
                                 </div>
                             </div>
@@ -431,8 +431,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">PLAN FG WO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
-                                            name="plan_fg_wo">
+                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                            placeholder="Masukkan PLAN FG" name="plan_fg_wo">
                                     </div>
                                 </div>
                             </div>
@@ -441,7 +441,7 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">PROGRES %</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                        <input type="text" class="form-control" placeholder="Masukkan Progress %"
                                             name="desc_progress">
                                     </div>
                                 </div>
@@ -449,9 +449,30 @@ if (isset($_POST["submit"])) {
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
+                                    <label class="control-label col-sm-4">DESKRIPSI PROGRESS</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control"
+                                            placeholder="Masukkan Deskripsi Progress" name="desc_progress">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">STATUS</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan Status"
+                                            name="status">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
                                     <label class="control-label col-sm-4">NO DELIVERY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                        <input type="text" class="form-control" placeholder="Masukkan No Delivery"
                                             name="delivery_no">
                                     </div>
                                 </div>
@@ -461,7 +482,7 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">TGL DELIVERY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Breakdown"
+                                        <input type="text" class="form-control" placeholder="Masukkan Tgl Delivery"
                                             name="delivery_tgl">
                                     </div>
                                 </div>
@@ -471,26 +492,8 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">KETERANGAN</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                        <input type="text" class="form-control" placeholder="Masukkan Keteragan"
                                             name="keterangan">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +503,8 @@ if (isset($_POST["submit"])) {
                     </div>
 
                     <div class="text-center">
-                        <button class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
+                        <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light "
+                            id="btn-submit">Simpan</button>
                     </div>
                     <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
                     </form>
