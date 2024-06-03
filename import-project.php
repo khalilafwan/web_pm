@@ -46,27 +46,18 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-                    <div class="file-upload">
-                        <button class="file-upload-btn" type="button"
-                            onclick="$('.file-upload-input').trigger( 'click' )">Import Project</button>
+                <form method="POST" action="impor_aksi.php" enctype="multipart/form-data">
+                <div class="container">
+                    <hr>
 
-                        <div class="image-upload-wrap">
-                            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                            <div class="drag-text">
-                                <h3>Drag and drop a file or select import Project</h3>
-                            </div>
-                        </div>
-                        <div class="file-upload-content">
-                            <img class="file-upload-image" src="#" alt="your image" />
-                            <div class="image-title-wrap">
-                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
-                                        class="image-title">Uploaded Project</span></button>
-                            </div>
-                        </div>
-                    </div>
-
+                    <label for="excel" class="drop-container" id="dropcontainer">
+                        <span class="drop-title">Drop files here</span>
+                        or
+                        <input type="file" id= "excel" name="excel_data" accept=".xlsx" required>
+                    </label><br>
+                    <button type="submit" name="submit" class="inputbtn">Input</button>
                 </div>
+            </form>
                 <!-- /.container-fluid -->
 
             </div>
