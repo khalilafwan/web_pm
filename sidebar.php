@@ -89,7 +89,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Edit:</h6>
                     <a class="collapse-item" href="utilities-color.php">Tables</a>
-                    <a class="collapse-item" href="utilities-border.php">Input Data</a>
+                    <a class="collapse-item" href="form-konsesi.php">Input Data</a>
                     <a class="collapse-item" href="utilities-animation.php">Export</a>
                     <!-- <a class="collapse-item" href="utilities-other.php">Other</a> -->
                 </div>
