@@ -113,6 +113,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script src="/khalilul/Magang/web_pm/js/script.js"></script>
 
 </body>
 
