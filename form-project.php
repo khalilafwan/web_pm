@@ -419,54 +419,60 @@ if (isset($_POST["submit"])) {
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">AKTUAL START PRODUKSI</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target PPC"
+                                            name="aktual_start_produksi">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">PLAN FG WO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Target Eng"
+                                            name="plan_fg_wo">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">PROGRES %</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                            name="desc_progress">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">NO DELIVERY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                            name="delivery_no">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">TGL DELIVERY</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Breakdown"
+                                            name="delivery_tgl">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">KETERANGAN</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Busbar"
+                                            name="keterangan">
                                     </div>
                                 </div>
                             </div>
