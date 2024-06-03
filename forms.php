@@ -23,31 +23,127 @@
 </head>
 
 <body>
-    <form>
-        <div class="mb-3"><label for="exampleFormControlInput1">Email address</label><input class="form-control"
-                id="exampleFormControlInput1" type="email" placeholder="name@example.com"></div>
-        <div class="mb-3">
-            <label for="exampleFormControlSelect1">Example select</label><select class="form-control"
-                id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+    <h2 class="text-center">Form Konsesi</h2>
+    <form class="form-horizontal">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-4">JO</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-sm-4">WO</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlSelect2">Example multiple select</label><select class="form-control"
-                id="exampleFormControlSelect2" multiple="">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-4">Nama Project</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4">Nama Panel</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
         </div>
-        <div class="mb-0"><label for="exampleFormControlTextarea1">Example textarea</label><textarea
-                class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Unit</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Jenis</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Konsesi</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Jml</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-2">No. LKPJ</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Status</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">TGL Matrial Datang</label>
+                <div class="col-sm-8">
+                    <input type="date" class="date-end ml-5 form-control datepicker col-sm-8" placeholder="Date End">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">TGL Pasang</label>
+                <div class="col-sm-8">
+                    <input type="date" class="date-end ml-5 form-control datepicker col-sm-8" placeholder="Date End">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Keterangan</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
+        </div>
+        <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
     </form>
 
     <!-- Bootstrap core JavaScript-->
