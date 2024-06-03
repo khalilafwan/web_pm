@@ -65,7 +65,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="tables-monitoring.php">Tables</a>
                     <h6 class="collapse-header">Fungsi:</h6>
-                    <a class="collapse-item" href="cards.php">Import Project</a>
+                    <a class="collapse-item" href="import-project.php">Import Project</a>
                     <a class="collapse-item" href="form-project.php">Input Project</a>
                     <a class="collapse-item" href="form-design.php">Input Design</a>
                     <a class="collapse-item" href="form-nesting.php">Input Nesting</a>
