@@ -115,7 +115,6 @@
                                             <th>DELIVERY TGL</th>
                                             <th>KETERANGAN</th>
                                             <th>AKSI</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -177,12 +176,7 @@
                                             <td>".$row['delivery_no']."</td>
                                             <td>".$row['delivery_tgl']."</td>
                                             <td>".$row['keterangan']."</td>
-                                            <td>".$row['keterangan']."</td>
-
-                                           
-
-
-                                            
+                                            <td>".$row['keterangan']."</td>   
                                             </tr>";
                                         }
                                         ?>
