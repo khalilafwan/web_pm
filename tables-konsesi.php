@@ -22,6 +22,7 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="DataTables/datatables.min.css" rel="stylesheet">
 
 </head>
 
@@ -179,6 +180,7 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
 
 </body>
 
