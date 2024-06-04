@@ -1,3 +1,28 @@
+<?php
+include 'header.php';
+require 'fungsi.php';
+//cek apakah tombol sudah ditekan
+if (isset($_POST["submit"])) {
+
+    //cek apakah data berhasil ditambahkan
+    if (inputdatakonsesi($_POST) > 0) {
+        echo "
+				<script>  
+					alert('Data Berhasil Ditambahkan');
+					document.location.href ='tables-konsesi.php';
+				</script>
+				";
+    } else {
+        echo "
+				<script>  
+					alert('Data Gagal Ditambahkan');
+					document.location.href ='tables-konsesi.php';
+				</script>
+				";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +34,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Forms</title>
+    <title>PMElectric | Input Konsesi</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -58,9 +83,19 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
+                                    <label class="control-label col-sm-4">NO</label>
+                                    <div class="col-sm-8">
+                                        <input type="int" class="form-control" placeholder="Masukkan No"
+                                            name="id_konsesi">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
                                     <label class="control-label col-sm-4">JO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan JO" name="jo">
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +104,7 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">WO</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan WO" name="wo">
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +113,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Nama Project</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Nama Project"
+                                            name="nama_project">
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +123,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Nama Panel</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Nama Panel"
+                                            name="nama_panel">
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +133,7 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Unit</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="int" class="form-control" placeholder="Masukkan Unit" name="unit">
                                     </div>
                                 </div>
                             </div>
@@ -105,16 +142,28 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Jenis</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Jenis"
+                                            name="jenis">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Konsesi</label>
+                                    <label class="control-label col-sm-4">No RPB</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan No RPB"
+                                            name="no_rpb">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">NO PO</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan No PO"
+                                            name="no_po">
                                     </div>
                                 </div>
                             </div>
@@ -128,18 +177,39 @@
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">Jumlah</label>
+                                    <label class="control-label col-sm-4">Kode Material</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Kode Material"
+                                            name="kode_material">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4 py-3">
                                 <div class="card-body">
-                                    <label class="control-label col-sm-4">No. LKPJ</label>
+                                    <label class="control-label col-sm-4">Konsesi</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Konsesi"
+                                            name="konsesi">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">Jml</label>
+                                    <div class="col-sm-8">
+                                        <input type="int" class="form-control" placeholder="Masukkan JML" name="jumlah">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 py-3">
+                                <div class="card-body">
+                                    <label class="control-label col-sm-4">NO LKPJ</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" placeholder="Masukkan No LKPJ"
+                                            name="no_lkpj">
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +218,22 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Status</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <button class="btn btn-primary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Choose
+                                        </button>
+                                        <div class="dropdown-menu animated--fade-in"
+                                            aria-labelledby="dropdownMenuButton">
+                                            <option value="Open">Open</option>
+                                            <option value="Close">Close</option>
+                                            <a class="dropdown-item" value="Open">Open</a>
+                                            <a class="dropdown-item" value="Close">Close</a>
+                                        </div>
+                                        <!-- <select name="status">
+                                            <option value="Open">Open</option>
+                                            <option value="Close">Close</option>
+                                        </select> -->
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +243,7 @@
                                     <label class="control-label col-sm-4">TGL Matrial Datang</label>
                                     <div class="col-sm-8">
                                         <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                            placeholder="Date End">
+                                            placeholder="Masukkan Tanggal Datang" name="tgl_matrial_dtg">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +253,7 @@
                                     <label class="control-label col-sm-4">TGL Pasang</label>
                                     <div class="col-sm-8">
                                         <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                            placeholder="Date End">
+                                            placeholder="Masukkan Tanggal Pasang" name="tgl_pasang">
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +262,8 @@
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Keterangan</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Masukkan Keterangan"
+                                            name="keterangan">
                                     </div>
                                 </div>
                             </div>
