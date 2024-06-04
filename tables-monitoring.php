@@ -114,7 +114,7 @@
                                             <th>DELIVERY NO</th>
                                             <th>DELIVERY TGL</th>
                                             <th>KETERANGAN</th>
-                                            <th>AKSI</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -129,7 +129,7 @@
                                             <td>".$row['tgl_jo']."</td>
                                             <td>".$row['nama_project']."</td>
                                             <td>".$row['kode_gbj']."</td>
-                                            <td>".$row['nilai_harga']."</td>
+                                            <td><p>Rp</p>".$row['nilai_harga']."</td>
                                             <td>".$row['nama_panel']."</td>
                                             <td>".$row['tipe_jenis']."</td>
                                             <td>".$row['tipe_fswm']."</td>
@@ -176,7 +176,7 @@
                                             <td>".$row['delivery_no']."</td>
                                             <td>".$row['delivery_tgl']."</td>
                                             <td>".$row['keterangan']."</td>
-                                            
+                                           
 
 
                                             
