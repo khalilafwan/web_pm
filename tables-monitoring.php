@@ -52,8 +52,8 @@
                     <h1 class="h3 mb-2 text-gray-800">Monitoring Project</h1>
                     <p class="mb-4">Memantau Project Berjalan di PT. Pura Mayungan</p>
 
-                     <!-- DataTales Example -->
-                     <div class="card shadow mb-4">
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Data Monitoring</h6>
                         </div>
@@ -62,58 +62,59 @@
                                 <table class="table table-bordered" id="dataTable" width="0%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                        <th>ID PROJECT</th>
-                                        <th>NO JO</th>
-                                        <th>TGL JO</th>
-                                        <th>PROYEK</th>
-                                        <th>KODE GBJ</th>
-                                        <th>NILAI HARGA</th>
-                                        <th>NAMA PANEL</th>
-                                        <th>TYPE JENIS</th>
-                                        <th>TYPE FS/WM</th>
-                                        <th>QTY UNIT</th>
-                                        <th>QTY CELL</th>
-                                        <th>WARNA</th>
-                                        <th>NOMOR WO</th>
-                                        <th>NO.SERI</th>
-                                        <th>HEIGTH</th>
-                                        <th>WIDTH</th>
-                                        <th>DEEP</th>
-                                        <th>MH STD</th>
-                                        <th>MH AKTUAL</th>
-                                        <th>TGL.SUBMIT FOR APPROVAL</th>
-                                        <th>TGL APPROVED</th>
-                                        <th>TGL RELEASE SOFT COPY</th>
-                                        <th>TGL RELEASE HARD COPY</th>
-                                        <th>BREAKDOWN</th>
-                                        <th>TARGET PPC</th>
-                                        <th>TARGET ENG</th>
-                                        <th>DESIGN PIC</th>
-                                        <th>DESIGN START</th>
-                                        <th>DESIGN END</th>
-                                        <th>NESTING PIC</th>
-                                        <th>NESTING START</th>
-                                        <th>NESTING END</th>
-                                        <th>PROGRAM PIC</th>
-                                        <th>PROGRAM START</th>
-                                        <th>PROGRAM END</th>
-                                        <th>CHECKER PIC</th>
-                                        <th>CHECKER START</th>
-                                        <th>CHECKER END</th>
-                                        <th>TGL BOX SELESAI</th>
-                                        <th>DUE DATE</th>
-                                        <th>TGL TERBIT WO</th>
-                                        <th>PLAN START PRODUKSI</th>
-                                        <th>AKTUAL START PRODUKSI</th>
-                                        <th>PLAN FG WO</th>
-                                        <th>AKTUAL FG WO</th>
-                                        <th>PROGRESS</th>
-                                        <th>DESC PROGRESS</th>
-                                        <th>STATUS</th>
-                                        <th>DELIVERY NO</th>
-                                        <th>PLAN FG WO</th>
-                                        <th>DELIVERY TGL</th>
-                                        <th>KETERANGAN</th>
+                                            <th>ID PROJECT</th>
+                                            <th>NO JO</th>
+                                            <th>TGL JO</th>
+                                            <th>PROYEK</th>
+                                            <th>KODE GBJ</th>
+                                            <th>NILAI HARGA</th>
+                                            <th>NAMA PANEL</th>
+                                            <th>TYPE JENIS</th>
+                                            <th>TYPE FS/WM</th>
+                                            <th>QTY UNIT</th>
+                                            <th>QTY CELL</th>
+                                            <th>WARNA</th>
+                                            <th>NOMOR WO</th>
+                                            <th>NO.SERI</th>
+                                            <th>HEIGTH</th>
+                                            <th>WIDTH</th>
+                                            <th>DEEP</th>
+                                            <th>MH STD</th>
+                                            <th>MH AKTUAL</th>
+                                            <th>TGL.SUBMIT FOR APPROVAL</th>
+                                            <th>TGL APPROVED</th>
+                                            <th>TGL RELEASE SOFT COPY</th>
+                                            <th>TGL RELEASE HARD COPY</th>
+                                            <th>BREAKDOWN</th>
+                                            <th>BUSBAR</th>
+                                            <th>TARGET PPC</th>
+                                            <th>TARGET ENG</th>
+                                            <th>DESIGN PIC</th>
+                                            <th>DESIGN START</th>
+                                            <th>DESIGN END</th>
+                                            <th>NESTING PIC</th>
+                                            <th>NESTING START</th>
+                                            <th>NESTING END</th>
+                                            <th>PROGRAM PIC</th>
+                                            <th>PROGRAM START</th>
+                                            <th>PROGRAM END</th>
+                                            <th>CHECKER PIC</th>
+                                            <th>CHECKER START</th>
+                                            <th>CHECKER END</th>
+                                            <th>TGL BOX SELESAI</th>
+                                            <th>DUE DATE</th>
+                                            <th>TGL TERBIT WO</th>
+                                            <th>PLAN START PRODUKSI</th>
+                                            <th>AKTUAL START PRODUKSI</th>
+                                            <th>PLAN FG WO</th>
+                                            <th>AKTUAL FG WO</th>
+                                            <th>PROGRESS</th>
+                                            <th>DESC PROGRESS</th>
+                                            <th>STATUS</th>
+                                            <th>DELIVERY NO</th>
+                                            <th>DELIVERY TGL</th>
+                                            <th>KETERANGAN</th>
+                                            <th>AKSI</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -148,6 +149,8 @@
                                             <td>".$row['tgl_release_dwg_hardcopy']."</td>
                                             <td>".$row['breakdown']."</td>
                                             <td>".$row['busbar']."</td>
+                                            <td>".$row['target_ppc']."</td>
+                                            <td>".$row['target_eng']."</td>
                                             <td>".$row['design_pic']."</td>
                                             <td>".$row['design_start']."</td>
                                             <td>".$row['design_end']."</td>
@@ -169,15 +172,14 @@
                                             <td>".$row['aktual_fg_wo']."</td>
                                             <td>".$row['progress']."</td>
                                             <td>".$row['desc_progress']."</td>
-                                            <td>".$row['aktual_fg_wo']."</td>
-                                            <td>".$row['progress']."</td>
-                                            <td>".$row['desc_progress']."</td>
                                             <td>".$row['status']."</td>
                                             <td>".$row['delivery_no']."</td>
                                             <td>".$row['delivery_tgl']."</td>
-                                            <td>".$row['aktual_fg_wo']."</td>
-                                            <td>".$row['progress']."</td>
                                             <td>".$row['keterangan']."</td>
+                                            
+
+
+                                            
                                             </tr>";
                                         }
                                         ?>
