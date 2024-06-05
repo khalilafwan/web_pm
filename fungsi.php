@@ -14,9 +14,10 @@ function query($query)
 }
 
 
-function inputdata($data){
+function inputdata($data)
+{
     global $conn;
-    $id= htmlspecialchars($data["id"]);
+    $id = htmlspecialchars($data["id"]);
     $no_jo = htmlspecialchars($data["no_jo"]);
     $tgl_jo = htmlspecialchars($data["tgl_jo"]);
     $nama_project = htmlspecialchars($data["nama_project"]);
@@ -91,9 +92,10 @@ function getProjectIds()
 }
 
 
-function updatedatamonitoring($data){
+function updatedatamonitoring($data)
+{
     global $conn;
-    $id= htmlspecialchars($data["id"]);
+    $id = htmlspecialchars($data["id"]);
     $no_jo = htmlspecialchars($data["no_jo"]);
     $tgl_jo = htmlspecialchars($data["tgl_jo"]);
     $nama_project = htmlspecialchars($data["nama_project"]);
@@ -141,12 +143,14 @@ function updatedatamonitoring($data){
 
 
 
-function hapusMonitoring($id){
+function hapusMonitoring($id)
+{
     global $conn;
     mysqli_query($conn, "DELETE FROM data_monitoring WHERE id = '$id'");
     return mysqli_affected_rows($conn);
 }
-function updateDesign($data) {
+function updateDesign($data)
+{
     global $conn;
     $id = htmlspecialchars($data["id"]);
     $designpic = htmlspecialchars($data["design_pic"]);
@@ -158,7 +162,8 @@ function updateDesign($data) {
     return mysqli_affected_rows($conn);
 }
 
-function updateNesting($data) {
+function updateNesting($data)
+{
     global $conn;
     $id = htmlspecialchars($data["id"]);
     $nestingpic = htmlspecialchars($data["nesting_pic"]);
@@ -170,7 +175,8 @@ function updateNesting($data) {
     return mysqli_affected_rows($conn);
 }
 
-function updateProgram($data) {
+function updateProgram($data)
+{
     global $conn;
     $id = htmlspecialchars($data["id"]);
     $programpic = htmlspecialchars($data["program_pic"]);
@@ -182,7 +188,8 @@ function updateProgram($data) {
     return mysqli_affected_rows($conn);
 }
 
-function updateChecker($data) {
+function updateChecker($data)
+{
     global $conn;
     $id = htmlspecialchars($data["id"]);
     $checkerpic = htmlspecialchars($data["checker_pic"]);
@@ -194,9 +201,10 @@ function updateChecker($data) {
     return mysqli_affected_rows($conn);
 }
 
-function inputdatakonsesi($data){
+function inputdatakonsesi($data)
+{
     global $conn;
-    $idkonsesi= htmlspecialchars($data["id_konsesi"]);
+    $idkonsesi = htmlspecialchars($data["id_konsesi"]);
     $jo = htmlspecialchars($data["jo"]);
     $wo = htmlspecialchars($data["wo"]);
     $nameproject = htmlspecialchars($data["nama_project"]);
@@ -241,9 +249,10 @@ function hapusKonsesi($id)
     return mysqli_affected_rows($conn);
 }
 
-function updatedatakonsesi($data){
+function updatedatakonsesi($data)
+{
     global $conn;
-    $id= $data["id_konsesi"];
+    $id = $data["id_konsesi"];
     $jo = htmlspecialchars($data["jo"]);
     $wo = htmlspecialchars($data["wo"]);
     $nameproject = htmlspecialchars($data["nama_project"]);
@@ -264,5 +273,20 @@ function updatedatakonsesi($data){
 
 }
 
+function chartMonitoring($data)
+{
+    global $conn;
+    $querydatamonitoring = "SELECT DATE_FORMAT(tgl_jo, '%M') as month, COUNT(*) as project_count FROM your_table_name GROUP BY DATE_FORMAT(tgl_jo, '%Y-%m') ORDER BY DATE_FORMAT(tgl_jo, '%Y-%m')";
 
+    $result = $conn->query($data);
+
+    $data = array();
+    while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
+    }
+
+    echo json_encode($data);
+
+    $conn->close();
+}
 ?>
