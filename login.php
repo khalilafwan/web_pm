@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['admin_username'])) {
     header("location:index.php");
 }
-include 'fungsi.php';
+require_once 'fungsi.php';
 
 $username = "";
 $password = "";
