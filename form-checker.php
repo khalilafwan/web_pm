@@ -9,14 +9,14 @@ if (isset($_POST["submit"])) {
         echo "
 				<script>  
 					alert('Data Berhasil Ditambahkan');
-					document.location.href ='monitoring.php';
+					document.location.href ='tables-monitoring.php';
 				</script>
 				";
     } else {
         echo "
 				<script>  
 					alert('Data Gagal Ditambahkan');
-					document.location.href ='monitoring.php';
+					document.location.href ='tables-monitoring.php';
 				</script>
 				";
     }
