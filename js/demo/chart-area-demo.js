@@ -42,7 +42,7 @@ function getData(){
 }
 
 var ctx = document.getElementById("myAreaChart");
-var myLineChart = new Chart(ctx, {
+var myAreaChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],

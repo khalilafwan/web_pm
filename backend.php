@@ -10,19 +10,16 @@ $functionName = htmlspecialchars($_GET['functionName']);
             getData();
             break;
         
-        case 'getDataLain':
-            getDataLain();
-            break;
+        
 
         default:
             break;    
     }
 
     function getData(){
-
-        global $koneksi;
+        global $conn;
         $data=[];
-        $query = mysqli_query($koneksi, "SELECT MONTH(tgl_jo) as month, COUNT(*) as project_count FROM data_monitoring GROUP BY MONTH(tgl_jo)");
+        $query = mysqli_query($conn, "SELECT MONTH(tgl_jo) as month, COUNT(*) as project_count FROM data_monitoring GROUP BY MONTH(tgl_jo)");
 
         while($row = mysqli_fetch_assoc($query)){
             $data[]=$row; 
