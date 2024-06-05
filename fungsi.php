@@ -1,6 +1,9 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "db_pm");
 
+if(!$conn){
+    die("Koneksi Gagal");
+}
 
 function query($query)
 {
