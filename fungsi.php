@@ -1,8 +1,67 @@
 <?php
+// session_start(); // Start session in fungsi.php
+// Include the database connection from fungsi.php
 $conn = mysqli_connect("localhost", "root", "", "db_pm");
 
-if(!$conn){
+if (!$conn) {
     die("Koneksi Gagal");
+}
+
+function login($username, $password)
+{
+    global $conn;
+    $err = "";
+    if ($username == '' or $password == '') {
+        $err .= "<p>Silahkan Masukkan username dan password</p>";
+    }
+    if (empty($err)) {
+        $sql1 = "SELECT * FROM admin WHERE username = '$username'";
+        $q1 = mysqli_query($conn, $sql1);
+
+        if ($q1) {
+            // Check if any rows were returned
+            if (mysqli_num_rows($q1) > 0) {
+                $r1 = mysqli_fetch_array($q1);
+
+                if ($r1['password'] != md5($password)) {
+                    $err .= "<p>Password Salah</p>";
+                }
+            } else {
+                $err .= "<p>Akun tidak ditemukan</p>";
+            }
+        } else {
+            // Handle query error, e.g., display an error message or log it
+            $err .= "<p>Error executing the query: " . mysqli_error($conn) . "</p>";
+        }
+    }
+    if (empty($err)) {
+        $login_id = $r1['login_id'];
+        $sql1 = "SELECT * FROM admin_akses WHERE login_id = '$login_id'";
+        $q1 = mysqli_query($conn, $sql1);
+        while ($r1 = mysqli_fetch_array($q1)) {
+            $akses[] = $r1['akses_id'];
+        }
+        if (empty($akses)) {
+            $err .= "<li>Kamu tidak punya akses ke halaman admin</li>";
+        }
+    }
+    if (empty($err)) {
+        $_SESSION['admin_username'] = $username;
+        $_SESSION['admin_akses'] = $akses;
+        header("location:index.php");
+        exit();
+    } else {
+        return $err; // Return error message if login fails
+    }
+}
+
+// Add logout function
+function logout()
+{
+    session_unset();
+    session_destroy();
+    header("location:login.php");
+    exit();
 }
 
 function query($query)
@@ -285,7 +344,7 @@ function chartMonitoring($conn)
 
     $data = array_fill(0, 12, 0); // Initialize array with 12 zeros
 
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $data[$row['month'] - 1] = $row['project_count']; // PHP months are 1-12, array index 0-11
     }
 
