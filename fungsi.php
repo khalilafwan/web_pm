@@ -273,20 +273,19 @@ function updatedatakonsesi($data)
 
 }
 
-function chartMonitoring($data)
+function chartMonitoring($conn)
 {
     global $conn;
-    $querydatamonitoring = "SELECT DATE_FORMAT(tgl_jo, '%M') as month, COUNT(*) as project_count FROM your_table_name GROUP BY DATE_FORMAT(tgl_jo, '%Y-%m') ORDER BY DATE_FORMAT(tgl_jo, '%Y-%m')";
+    $querydatamonitoring = "SELECT MONTH(tgl_jo) as month, COUNT(*) as project_count FROM your_table_name GROUP BY MONTH(tgl_jo)";
 
-    $result = $conn->query($data);
+    $result = $conn->query($querydatamonitoring);
 
-    $data = array();
-    while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
+    $data = array_fill(0, 12, 0); // Initialize array with 12 zeros
+
+    while($row = $result->fetch_assoc()) {
+        $data[$row['month'] - 1] = $row['project_count']; // PHP months are 1-12, array index 0-11
     }
 
-    echo json_encode($data);
-
-    $conn->close();
+    return json_encode($data);
 }
 ?>
