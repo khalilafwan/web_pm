@@ -3,16 +3,54 @@ session_start();
 if (isset($_SESSION['admin_username'])) {
     header("location:index.php");
 }
-require_once 'fungsi.php';
-
+include 'koneksi.php';
+include 'fungsi.php';
 $username = "";
 $password = "";
 $err = "";
-
-if (isset($_POST['login'])) {
+if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $err = login($username, $password); // Call the login function from fungsi.php
+    if($username == '' or $password == ''){
+        $err .= "<p>Silahkan Masukkan username dan password</p>";
+    }
+    if (empty($err)) {
+        $sql1 = "select * from admin where username = '$username'";
+        $q1 = mysqli_query($conn, $sql1);
+    
+        if ($q1) {
+            // Check if any rows were returned
+            if (mysqli_num_rows($q1) > 0) {
+                $r1 = mysqli_fetch_array($q1);
+                
+                if ($r1['password'] != md5($password)) {
+                    $err .= "<p>Password Salah</p>";
+                }
+            } else {
+                $err .= "<p>Akun tidak ditemukan</p>";
+            }
+        } else {
+            // Handle query error, e.g., display an error message or log it
+            $err .= "<p>Error executing the query: " . mysqli_error($conn) . "</p>";
+        }
+    }
+    if (empty($err)) {
+        $login_id = $r1['login_id'];
+        $sql1 = "select * from admin_akses where login_id = '$login_id'";
+        $q1 = mysqli_query($conn, $sql1);
+        while ($r1 = mysqli_fetch_array($q1)) {
+            $akses[] = $r1['akses_id']; 
+        }
+        if (empty($akses)) {
+            $err .= "<li>Kamu tidak punya akses ke halaman admin</li>";
+        }
+    }
+    if (empty($err)) {
+        $_SESSION['admin_username'] = $username;
+        $_SESSION['admin_akses'] = $akses;
+        header("location:index.php");
+        exit();
+    }
 }
 
 ?>
@@ -77,12 +115,11 @@ if (isset($_POST['login'])) {
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="login"
-                                            value="Login" />
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="login" value="Login" />
 
                                         <?php
                                         if ($err) {
-                                            echo "<h style='color: red; text-align: center;'>$err</h>";
+                                        echo "<h style='color: red; text-align: center;'>$err</h>";
                                         }
                                         ?>
                                         <!-- <hr>
