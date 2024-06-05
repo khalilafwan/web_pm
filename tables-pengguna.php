@@ -50,7 +50,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Konsesi Project</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Manajemen Pengguna</h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
@@ -58,56 +58,29 @@
                      <!-- DataTales Example -->
                      <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data Konsesi</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Data Pengguna</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataKonsesi" width="0%" cellspacing="0">
+                                <table class="table table-bordered" id="dataUser" width="0%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                        <th>ID Konsesi</th>
-                                        <th>JO</th>
-                                        <th>WO</th>
-                                        <th>Nama Project</th>
-                                        <th>Nama Panel</th>
-                                        <th>Unit</th>
-                                        <th>Jenis</th>
-                                        <th>NO RPB</th>
-                                        <th>NO PO</th>
-                                        <th>Kode Material</th>
-                                        <th>Konsesi</th>
-                                        <th>Jumlah</th>
-                                        <th>NO LKPJ</th>
-                                        <th>Status</th>
-                                        <th>TGL Matrial Dtg</th>
-                                        <th>TGL Pasang</th>
-                                        <th>Keterangan</th>
+                                        <th>ID Login</th>
+                                        <th>Username</th>
+                                        <th>Password</th>
+                                        <!-- <th>Aksi</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         include 'koneksi.php';
-                                        $data = mysqli_query($koneksi,"select * from konsesi");
+                                        $data = mysqli_query($koneksi,"select * from admin");
                                         while($row = mysqli_fetch_array($data))
                                         {
                                             echo "<tr>
-                                            <td>".$row['id_konsesi']."</td>
-                                            <td>".$row['jo']."</td>
-                                            <td>".$row['wo']."</td>
-                                            <td>".$row['nama_project']."</td>
-                                            <td>".$row['nama_panel']."</td>
-                                            <td>".$row['unit']."</td>
-                                            <td>".$row['jenis']."</td>
-                                            <td>".$row['no_rpb']."</td>
-                                            <td>".$row['no_po']."</td>
-                                            <td>".$row['kode_material']."</td>
-                                            <td>".$row['konsesi']."</td>
-                                            <td>".$row['jumlah']."</td>
-                                            <td>".$row['no_lkpj']."</td>
-                                            <td>".$row['status']."</td>
-                                            <td>".$row['tgl_matrial_dtg']."</td>
-                                            <td>".$row['tgl_pasang']."</td>
-                                            <td>".$row['keterangan']."</td>
+                                            <td>".$row['login_id']."</td>
+                                            <td>".$row['username']."</td>
+                                            <td>".$row['password']."</td>
                                             </tr>";
                                         }
                                         ?>

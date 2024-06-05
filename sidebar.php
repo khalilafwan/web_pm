@@ -54,14 +54,15 @@
             Menu
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- Nav Item - Monitoring Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMonitoring"
+                aria-expanded="true" aria-controls="collapseMonitoring">
+                <i class="fas fa-fw fa-desktop"></i>
                 <span>Monitoring</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseMonitoring" class="collapse" aria-labelledby="headingMonitoring"
+                data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="tables-monitoring.php">Tables</a>
                     <h6 class="collapse-header">Fungsi:</h6>
@@ -71,27 +72,44 @@
                     <a class="collapse-item" href="form-nesting.php">Input Nesting</a>
                     <a class="collapse-item" href="form-program.php">Input Program</a>
                     <a class="collapse-item" href="form-checker.php">Input Checker</a>
-                    <a class="collapse-item" href="cards.php">Export</a>
-
+                    <a class="collapse-item" href="tables-monitoring.php">Export</a>
                 </div>
             </div>
         </li>
 
-        <!-- Nav Item - Utilities Collapse Menu -->
+        <!-- Nav Item - Konsesi Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKonsesi"
+                aria-expanded="true" aria-controls="collapseKonsesi">
+                <i class="fas fa-fw fa-desktop"></i>
                 <span>Konsesi</span>
             </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                data-parent="#accordionSidebar">
+            <div id="collapseKonsesi" class="collapse" aria-labelledby="headingKonsesi" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="tables-konsesi.php">Tables</a>
                     <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="form-konsesi.php">Input Data</a>
-                    <a class="collapse-item" href="utilities-animation.php">Export</a>
-                    <!-- <a class="collapse-item" href="utilities-other.php">Other</a> -->
+                    <a class="collapse-item" href="tables-konsesi.php">Export</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - User Management Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUserManagement"
+                aria-expanded="true" aria-controls="collapseUserManagement">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Manajemen Pengguna</span>
+            </a>
+            <div id="collapseUserManagement" class="collapse" aria-labelledby="headingUserManagement"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="tables-pengguna.php">Daftar Pengguna</a>
+                    <h6 class="collapse-header">Fungsi:</h6>
+                    <a class="collapse-item" href="form-konsesi.php">Tambah Pengguna</a>
+                    <a class="collapse-item" href="tables-konsesi.php">Edit Pengguna</a>
+                    <a class="collapse-item" href="tables-konsesi.php">Daftar Organisasi</a>
+                    <a class="collapse-item" href="tables-konsesi.php">Detil Organisasi</a>
                 </div>
             </div>
         </li>
