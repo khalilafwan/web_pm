@@ -1,4 +1,5 @@
 <?php
+include 'header.php';
 require 'fungsi.php';
 //cek apakah tombol sudah ditekan
 if (isset($_POST["submit"])) {

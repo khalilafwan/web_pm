@@ -1,8 +1,8 @@
 <?php
 session_start();
-include 'database.php';
+include 'koneksi.php';
 if(!isset($_SESSION['admin_username'])){
-    header("location:index.php");
+    header("location:login.php");
 }
 
 ?>
