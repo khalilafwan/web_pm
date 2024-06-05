@@ -31,7 +31,7 @@
             <div class="sidebar-brand-icon">
                 <!-- <link rel="icon" href="./img/PM.ico"> -->
                 <!-- <i class="fas fa-laugh-wink"></i> -->
-                <img src="./img/pm_favico.png"></img>
+                <img src="./img/pm_favico.png" width="30px"></img>
             </div>
             <div class="sidebar-brand-text mx-3"><img src="./img/logoPM.png"></img></div>
         </a>
