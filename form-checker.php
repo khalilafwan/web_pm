@@ -45,6 +45,7 @@ if (isset($_POST["submit"])) {
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="icon" href="./img/pm_favico.png">
 
 </head>
 
