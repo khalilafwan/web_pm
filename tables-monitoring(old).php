@@ -248,7 +248,6 @@ include 'header.php';
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-    <script src="DataTables/datatables.min.js"></script>
 
 </body>
 

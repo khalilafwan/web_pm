@@ -31,7 +31,7 @@
             <div class="sidebar-brand-icon">
                 <!-- <link rel="icon" href="./img/PM.ico"> -->
                 <!-- <i class="fas fa-laugh-wink"></i> -->
-                <img src="./img/pm_favico.png" width="30px"></img>
+                <img src="./img/pm_favico.png" width="27px"></img>
             </div>
             <div class="sidebar-brand-text mx-3"><img src="./img/logoPM.png"></img></div>
         </a>
@@ -72,7 +72,7 @@
                     <a class="collapse-item" href="form-nesting.php">Input Nesting</a>
                     <a class="collapse-item" href="form-program.php">Input Program</a>
                     <a class="collapse-item" href="form-checker.php">Input Checker</a>
-                    <a class="collapse-item" href="tables-monitoring.php">Export</a>
+                    <!-- <a class="collapse-item" href="tables-monitoring.php">Export</a> -->
                 </div>
             </div>
         </li>
@@ -89,7 +89,7 @@
                     <a class="collapse-item" href="tables-konsesi.php">Tables</a>
                     <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="form-konsesi.php">Input Data</a>
-                    <a class="collapse-item" href="tables-konsesi.php">Export</a>
+                    <!-- <a class="collapse-item" href="tables-konsesi.php">Export</a> -->
                 </div>
             </div>
         </li>
