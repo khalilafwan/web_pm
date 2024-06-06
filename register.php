@@ -57,29 +57,22 @@
                             <!-- Border Left -->
                             <div class="col-lg-6">
 
-                                <div class="card mb-4 py-3">
+                                <div class=" card mb-4 py-3">
                                     <div class="card-body">
-                                        <label class="control-label col-sm-4" for="id">ID Project</label>
+                                        <label class="control-label col-sm-4">Username</label>
                                         <div class="col-sm-8">
-                                            <select name="id" id="statdrop"
-                                                class="date-end ml-5 form-control datepicker col-sm-8">
-                                                <?php
-                                                $projectIds = getProjectIds(); // You need to implement this function
-                                                foreach ($projectIds as $projectId) {
-                                                    echo "<option value=\"$projectId\">$projectId</option>";
-                                                }
-                                                ?>
-                                            </select>
+                                            <input type="text" class="form-control" placeholder="Masukkan Username"
+                                                name="username">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class=" card mb-4 py-3">
                                     <div class="card-body">
-                                        <label class="control-label col-sm-4">ID PIC</label>
+                                        <label class="control-label col-sm-4">Passwords</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control" placeholder="Masukkan PIC"
-                                                name="design_pic">
+                                            <input type="text" class="form-control" placeholder="Masukkan Password"
+                                                name="password">
                                         </div>
                                     </div>
                                 </div>
@@ -91,20 +84,17 @@
 
                                 <div class="card mb-4 py-3">
                                     <div class="card-body">
-                                        <label class="control-label col-sm-4">START</label>
+                                        <label class="control-label col-sm-4" for="id">Roles</label>
                                         <div class="col-sm-8">
-                                            <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                                placeholder="Masukan Waktu Start" name="design_start">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card mb-4 py-3">
-                                    <div class="card-body">
-                                        <label class="control-label col-sm-4">END</label>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                                placeholder="Masukan Waktu End" name="design_end">
+                                            <select name="id" id="statdrop"
+                                                class="date-end ml-5 form-control datepicker col-sm-8">
+                                                <?php
+                                                $projectIds = getProjectIds(); // You need to implement this function
+                                                foreach ($projectIds as $projectId) {
+                                                    echo "<option value=\"$projectId\">$projectId</option>";
+                                                }
+                                                ?>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
