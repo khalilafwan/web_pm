@@ -1,6 +1,30 @@
 <?php
-include 'header.php';
+require_once 'header.php';
+require_once 'query.php';
+require_once 'crud-monitoring.php';
+
+//cek apakah tombol sudah ditekan
+if (isset($_POST["submit"])) {
+
+    //cek apakah data berhasil ditambahkan
+    if (inputdata($_POST) > 0) {
+        echo "
+				<script>  
+					alert('Data Berhasil Ditambahkan');
+					document.location.href ='tables-monitoring.php';
+				</script>
+				";
+    } else {
+        echo "
+				<script>  
+					alert('Data Gagal Ditambahkan');
+					document.location.href ='tables-monitoring.php';
+				</script>
+				";
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,16 +74,16 @@ include 'header.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                <form method="POST" action="impor_aksi.php" enctype="multipart/form-data">
+                <form method="POST" action="import_aksi.php" enctype="multipart/form-data">
                 <div class="container">
                     <hr>
 
                     <label for="excel" class="drop-container" id="dropcontainer">
-                        <span class="drop-title">Drop files here</span>
+                        <span class="drop-title">Letakkan File Disini</span>
                         or
                         <input type="file" id= "excel" name="excel_data" accept=".xlsx" required>
                     </label><br>
-                    <button type="submit" name="submit" class="inputbtn">Input</button>
+                    <button type="submit" name="submit" class="inputbtn">Import</button>
                 </div>
             </form>
                 <!-- /.container-fluid -->

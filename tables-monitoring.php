@@ -133,7 +133,7 @@ require_once 'header.php';
                                             <td>".$row['tgl_jo']."</td>
                                             <td>".$row['nama_project']."</td>
                                             <td>".$row['kode_gbj']."</td>
-                                            <td>".$row['nilai_harga']."</td>
+                                            <td>Rp. ".$row['nilai_harga']."</td>
                                             <td>".$row['nama_panel']."</td>
                                             <td>".$row['tipe_jenis']."</td>
                                             <td>".$row['tipe_fswm']."</td>
