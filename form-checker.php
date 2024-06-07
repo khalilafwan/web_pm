@@ -2,13 +2,13 @@
 <?php
 require_once 'header.php';
 require_once 'query.php';
-require_once 'crud.php';
+require_once 'crud-monitoring.php';
 
 //cek apakah tombol sudah ditekan
 if (isset($_POST["submit"])) {
 
     //cek apakah data berhasil ditambahkan
-    if (inputdata($_POST) > 0) {
+    if (updateChecker($_POST) > 0) {
         echo "
 				<script>  
 					alert('Data Berhasil Ditambahkan');

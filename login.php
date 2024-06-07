@@ -3,8 +3,10 @@ session_start();
 if (isset($_SESSION['admin_username'])) {
     header("location:index.php");
 }
-include 'koneksi.php';
-include 'fungsi.php';
+require_once 'koneksi.php';
+require_once 'query.php';
+require_once 'crud.php';
+
 $username = "";
 $password = "";
 $err = "";
@@ -16,7 +18,7 @@ if(isset($_POST['login'])){
     }
     if (empty($err)) {
         $sql1 = "select * from admin where username = '$username'";
-        $q1 = mysqli_query($conn, $sql1);
+        $q1 = mysqli_query($koneksi, $sql1);
     
         if ($q1) {
             // Check if any rows were returned
@@ -31,13 +33,13 @@ if(isset($_POST['login'])){
             }
         } else {
             // Handle query error, e.g., display an error message or log it
-            $err .= "<p>Error executing the query: " . mysqli_error($conn) . "</p>";
+            $err .= "<p>Error executing the query: " . mysqli_error($koneksi) . "</p>";
         }
     }
     if (empty($err)) {
         $login_id = $r1['login_id'];
         $sql1 = "select * from admin_akses where login_id = '$login_id'";
-        $q1 = mysqli_query($conn, $sql1);
+        $q1 = mysqli_query($koneksi, $sql1);
         while ($r1 = mysqli_fetch_array($q1)) {
             $akses[] = $r1['akses_id']; 
         }

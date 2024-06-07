@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+require_once 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +124,7 @@ include 'header.php';
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $data = mysqli_query($koneksi,"select * from data_monitoring");
+                                        $data = mysqli_query($conn,"select * from data_monitoring");
                                         while($row = mysqli_fetch_array($data))
                                         {
                                             echo "<tr>

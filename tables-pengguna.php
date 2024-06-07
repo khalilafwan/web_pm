@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+require_once 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +78,7 @@ include 'header.php';
                                     <tbody>
                                         <?php
                                         include 'koneksi.php';
-                                        $data = mysqli_query($koneksi,"select * from admin");
+                                        $data = mysqli_query($conn,"select * from admin");
                                         while($row = mysqli_fetch_array($data))
                                         {
                                             echo "<tr>

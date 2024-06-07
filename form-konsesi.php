@@ -1,7 +1,7 @@
 <?php
 require_once 'header.php';
 require_once 'query.php';
-require_once 'crud.php';
+require_once 'crud-konsesi.php';
 
 //cek apakah tombol sudah ditekan
 if (isset($_POST["submit"])) {
@@ -78,6 +78,7 @@ if (isset($_POST["submit"])) {
                     <p class="mb-4">Mohon Isi Data Konsesi pada Form di Bawah ini.
                     </p>
 
+                    <form method="POST" action="">
 
                     <div class="row">
 
@@ -277,7 +278,7 @@ if (isset($_POST["submit"])) {
                     </div>
 
                     <div class="text-center">
-                        <button class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
+                        <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
                     </div>
                     <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
                     </form>

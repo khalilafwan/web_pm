@@ -1,7 +1,7 @@
 <?php
 require_once 'header.php';
 require_once 'query.php';
-require_once 'crud.php';
+require_once 'crud-monitoring.php';
 
 //cek apakah tombol sudah ditekan
 if (isset($_POST["submit"])) {
@@ -79,8 +79,6 @@ if (isset($_POST["submit"])) {
                     </p>
 
                     <form method="POST" action="">
-
-
                         <div class="row">
 
                             <!-- Border Left -->
@@ -507,8 +505,7 @@ if (isset($_POST["submit"])) {
 
 
                         </div>
-                    </form>
-
+                        
                     <div class="text-center">
                         <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light "
                             id="btn-submit">Simpan</button>
@@ -523,7 +520,7 @@ if (isset($_POST["submit"])) {
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include("footer.php") ?>
+            <?php include ("footer.php") ?>
             <!-- End of Footer -->
 
         </div>
