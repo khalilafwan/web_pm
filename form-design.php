@@ -1,7 +1,9 @@
 
 <?php
-include 'header.php';
-require_once 'fungsi.php';
+require_once 'header.php';
+require_once 'query.php';
+require_once 'crud.php';
+
 //cek apakah tombol sudah ditekan
 if (isset($_POST["submit"])) {
 

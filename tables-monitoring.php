@@ -124,7 +124,6 @@ include 'header.php';
                                     </thead>
                                     <tbody>
                                         <?php
-                                        include 'koneksi.php';
                                         $data = mysqli_query($koneksi,"select * from data_monitoring");
                                         while($row = mysqli_fetch_array($data))
                                         {
