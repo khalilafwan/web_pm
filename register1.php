@@ -1,25 +1,58 @@
 <?php
 include 'header.php';
-// require 'fungsi.php';
-//cek apakah tombol sudah ditekan
-if (isset($_POST["submit"])) {
+function getProjectIds() {
+    // Koneksi ke database
+    $conn = new mysqli("localhost", "root", "", "db_pm");
 
-    //cek apakah data berhasil ditambahkan
-    if (inputdataregister($_POST) > 0) {
-        echo "
-				<script>  
-					alert('Data Berhasil Ditambahkan');
-					document.location.href ='tables-pengguna.php';
-				</script>
-				";
-    } else {
-        echo "
-				<script>  
-					alert('Data Gagal Ditambahkan');
-					document.location.href ='tables-pengguna.php';
-				</script>
-				";
+    // Periksa koneksi
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
+
+    // Query untuk mengambil data dari tabel master_akses
+    $sql = "SELECT akses_id, nama FROM master_akses";
+    $result = $conn->query($sql);
+
+    $projectIds = [];
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $projectIds[$row['akses_id']] = $row['nama'];
+        }
+    }
+
+    $conn->close();
+
+    return $projectIds;
+}
+
+function inputdataregister() {
+    // Koneksi ke database
+    $conn = new mysqli("hostname", "username", "password", "database");
+
+    // Periksa koneksi
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Ambil data dari form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $akses_id = $_POST['id'];
+
+    // Query untuk menyimpan data ke tabel admin
+    $sql = "INSERT INTO admin (username, password, login_id) VALUES ('$username', '$password', '$akses_id')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+    inputdataregister();
 }
 ?>
 
@@ -105,45 +138,28 @@ if (isset($_POST["submit"])) {
                                     </div>
                                 </div>
 
-
-
                             </div>
-
                             <!-- Border Right -->
                             <div class="col-lg-6">
 
-                                <div class=" card mb-4 py-3">
-                                    <div class="card-body">
-                                        <label class="control-label col-sm-4">Nama</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" placeholder="Masukkan Nama"
-                                                name="nama">
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="card mb-4 py-3">
                                     <div class="card-body">
-                                        <label class="control-label col-sm-4" for="akses_id">Roles</label>
+                                        <label class="control-label col-sm-4" for="id">Roles</label>
                                         <div class="col-sm-8">
-                                            <select name="akses_id" id="statdrop"
+                                            <select name="id" id="statdrop"
                                                 class="date-end ml-5 form-control datepicker col-sm-8">
                                                 <?php
-                                                $akses_id = getakses_id (); // You need to implement this function
-                                                foreach ($akses_id as $akses_id) {
-                                                    echo "<option value=\"$akses_id\">$akses_id</option>";
+                                                $projectIds = getProjectIds(); // You need to implement this function
+                                                foreach ($projectIds as $projectId) {
+                                                    echo "<option value=\"$projectId\">$projectId</option>";
                                                 }
                                                 ?>
-                                                <option selected value="user">User</option>
-                                                <option value="admin">Admin</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-
-
 
                         </div>
 

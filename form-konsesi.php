@@ -219,11 +219,11 @@ if (isset($_POST["submit"])) {
                                 <div class="card-body">
                                     <label class="control-label col-sm-4">Status</label>
                                     <div class="col-sm-8">
-                                        <button class="btn btn-primary dropdown-toggle" type="button"
+                                        <!-- <button class="btn btn-primary dropdown-toggle" type="button"
                                             id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
                                             Choose
-                                        </button>
+                                        </button> -->
                                         <div class="dropdown-menu animated--fade-in"
                                             aria-labelledby="dropdownMenuButton">
                                             <option value="Open">Open</option>

@@ -96,10 +96,12 @@
 
         <!-- Nav Item - User Management Collapse Menu -->
         <li class="nav-item">
+
+            <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUserManagement"
                 aria-expanded="true" aria-controls="collapseUserManagement">
                 <i class="fas fa-fw fa-user"></i>
-                <span>Manajemen Pengguna</span>
+                <span>Manajemen Pengguna</span><?php } ?>
             </a>
             <div id="collapseUserManagement" class="collapse" aria-labelledby="headingUserManagement"
                 data-parent="#accordionSidebar">
