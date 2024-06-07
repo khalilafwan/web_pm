@@ -99,7 +99,7 @@ if(isset($_POST['login'])){
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4"><img src="./img/logoPM.png" alt=""></h1>
                                     </div>
                                     <form class="user" action="" method="post">
                                         <div class="form-group">
