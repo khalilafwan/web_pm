@@ -74,68 +74,48 @@ if (isset($_POST["submit"])) {
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                <form method="POST" action="import_aksi.php" enctype="multipart/form-data">
-                <div class="container">
-                    <hr>
+                    <form method="POST" action="import_aksi.php" enctype="multipart/form-data">
+                        <div class="container">
+                            <hr>
 
-                    <label for="excel" class="drop-container" id="dropcontainer">
-                        <span class="drop-title">Letakkan File Disini</span>
-                        or
-                        <input type="file" id= "excel" name="excel_data" accept=".xlsx" required>
-                    </label><br>
-                    <button type="submit" name="submit" class="inputbtn">Import</button>
+                            <label for="excel" class="drop-container" id="dropcontainer">
+                                <span class="drop-title">Letakkan File Disini</span>
+                                or
+                                <input type="file" id="excel" name="excel_data" accept=".xlsx" required>
+                            </label><br>
+                            <button type="submit" name="submit" class="inputbtn">Import</button>
+                        </div>
+                    </form>
+                    <!-- /.container-fluid -->
+
                 </div>
-            </form>
-                <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <?php include("footer.php") ?>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <?php include("footer.php") ?>
-            <!-- End of Footer -->
+            <!-- End of Content Wrapper -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-    <script src="/khalilul/Magang/web_pm/js/script.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+        <script src="/khalilul/Magang/web_pm/js/script.js"></script>
 
 </body>
 

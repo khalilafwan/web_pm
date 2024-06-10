@@ -80,207 +80,210 @@ if (isset($_POST["submit"])) {
 
                     <form method="POST" action="">
 
-                    <div class="row">
+                        <div class="row">
 
-                        <!-- Border Left -->
-                        <div class="col-lg-6">
+                            <!-- Border Left -->
+                            <div class="col-lg-6">
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">NO</label>
-                                    <div class="col-sm-8">
-                                        <input type="int" class="form-control" placeholder="Masukkan No"
-                                            name="id_konsesi">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">NO</label>
+                                        <div class="col-sm-8">
+                                            <input type="int" class="form-control" placeholder="Masukkan No"
+                                                name="id_konsesi">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">JO</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan JO" name="jo">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">JO</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan JO" name="jo">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">WO</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan WO" name="wo">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">WO</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan WO" name="wo">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Nama Project</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Nama Project"
-                                            name="nama_project">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Nama Project</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan Nama Project"
+                                                name="nama_project">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Nama Panel</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Nama Panel"
-                                            name="nama_panel">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Nama Panel</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan Nama Panel"
+                                                name="nama_panel">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Unit</label>
-                                    <div class="col-sm-8">
-                                        <input type="int" class="form-control" placeholder="Masukkan Unit" name="unit">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Unit</label>
+                                        <div class="col-sm-8">
+                                            <input type="int" class="form-control" placeholder="Masukkan Unit"
+                                                name="unit">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Jenis</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Jenis"
-                                            name="jenis">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Jenis</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan Jenis"
+                                                name="jenis">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">No RPB</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan No RPB"
-                                            name="no_rpb">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">No RPB</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan No RPB"
+                                                name="no_rpb">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">NO PO</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan No PO"
-                                            name="no_po">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">NO PO</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan No PO"
+                                                name="no_po">
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
 
-                        </div>
 
 
+                            <!-- Border Right -->
+                            <div class="col-lg-6">
 
-                        <!-- Border Right -->
-                        <div class="col-lg-6">
-
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Kode Material</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Kode Material"
-                                            name="kode_material">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Kode Material</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan Kode Material"
+                                                name="kode_material">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Konsesi</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Konsesi"
-                                            name="konsesi">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Konsesi</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan Konsesi"
+                                                name="konsesi">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Jml</label>
-                                    <div class="col-sm-8">
-                                        <input type="int" class="form-control" placeholder="Masukkan JML" name="jumlah">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Jml</label>
+                                        <div class="col-sm-8">
+                                            <input type="int" class="form-control" placeholder="Masukkan JML"
+                                                name="jumlah">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">NO LKPJ</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan No LKPJ"
-                                            name="no_lkpj">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">NO LKPJ</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan No LKPJ"
+                                                name="no_lkpj">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Status</label>
-                                    <div class="col-sm-8">
-                                        <!-- <button class="btn btn-primary dropdown-toggle" type="button"
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Status</label>
+                                        <div class="col-sm-8">
+                                            <!-- <button class="btn btn-primary dropdown-toggle" type="button"
                                             id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
                                             Choose
                                         </button> -->
-                                        <div class="dropdown-menu animated--fade-in"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <option value="Open">Open</option>
-                                            <option value="Close">Close</option>
-                                            <a class="dropdown-item" value="Open">Open</a>
-                                            <a class="dropdown-item" value="Close">Close</a>
-                                        </div>
-                                        <!-- <select name="status">
+                                            <div class="dropdown-menu animated--fade-in"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <option value="Open">Open</option>
+                                                <option value="Close">Close</option>
+                                                <a class="dropdown-item" value="Open">Open</a>
+                                                <a class="dropdown-item" value="Close">Close</a>
+                                            </div>
+                                            <!-- <select name="status">
                                             <option value="Open">Open</option>
                                             <option value="Close">Close</option>
                                         </select> -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">TGL Matrial Datang</label>
-                                    <div class="col-sm-8">
-                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                            placeholder="Masukkan Tanggal Datang" name="tgl_matrial_dtg">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">TGL Matrial Datang</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                                placeholder="Masukkan Tanggal Datang" name="tgl_matrial_dtg">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">TGL Pasang</label>
-                                    <div class="col-sm-8">
-                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                            placeholder="Masukkan Tanggal Pasang" name="tgl_pasang">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">TGL Pasang</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
+                                                placeholder="Masukkan Tanggal Pasang" name="tgl_pasang">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">Keterangan</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Keterangan"
-                                            name="keterangan">
+                                <div class="card mb-4 py-3">
+                                    <div class="card-body">
+                                        <label class="control-label col-sm-4">Keterangan</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Masukkan Keterangan"
+                                                name="keterangan">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+
+                            </div>
 
                         </div>
 
-                    </div>
-
-                    <div class="text-center">
-                        <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light " id="btn-submit">Simpan</button>
-                    </div>
-                    <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
+                        <div class="text-center">
+                            <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light "
+                                id="btn-submit">Simpan</button>
+                        </div>
+                        <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
                     </form>
 
                 </div>
@@ -303,26 +306,6 @@ if (isset($_POST["submit"])) {
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
