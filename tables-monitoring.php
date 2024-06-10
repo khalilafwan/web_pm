@@ -36,7 +36,7 @@ require_once 'header.php';
     <div id="wrapper">
 
         <!-- Ini Sidebar -->
-        <?php include("sidebar.php") ?>
+        <?php include ("sidebar.php") ?>
         <!-- Batas Akhir Sidebar -->
 
         <!-- Content Wrapper -->
@@ -46,7 +46,7 @@ require_once 'header.php';
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include("top-bar.php") ?>
+                <?php include ("top-bar.php") ?>
 
                 <!-- End of Topbar -->
 
@@ -124,63 +124,65 @@ require_once 'header.php';
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $data = mysqli_query($conn,"select * from data_monitoring");
-                                        while($row = mysqli_fetch_array($data))
-                                        {
+                                        $data = mysqli_query($conn, "select * from data_monitoring");
+                                        while ($row = mysqli_fetch_array($data)) {
                                             echo "<tr>
-                                            <td>".$row['id']."</td>
-                                            <td>".$row['no_jo']."</td>
-                                            <td>".$row['tgl_jo']."</td>
-                                            <td>".$row['nama_project']."</td>
-                                            <td>".$row['kode_gbj']."</td>
-                                            <td>Rp. ".$row['nilai_harga']."</td>
-                                            <td>".$row['nama_panel']."</td>
-                                            <td>".$row['tipe_jenis']."</td>
-                                            <td>".$row['tipe_fswm']."</td>
-                                            <td>".$row['qty_unit']."</td>
-                                            <td>".$row['qty_cell']."</td>
-                                            <td>".$row['warna']."</td>
-                                            <td>".$row['nomor_wo']."</td>
-                                            <td>".$row['nomor_seri']."</td>
-                                            <td>".$row['size_panel_height']."</td>
-                                            <td>".$row['size_panel_width']."</td>
-                                            <td>".$row['size_panel_deep']."</td>
-                                            <td>".$row['mh_std']."</td>
-                                            <td>".$row['mh_aktual']."</td>
-                                            <td>".$row['tgl_submit_dwg_for_approval']."</td>
-                                            <td>".$row['tgl_approved']."</td>
-                                            <td>".$row['tgl_release_dwg_softcopy']."</td>
-                                            <td>".$row['tgl_release_dwg_hardcopy']."</td>
-                                            <td>".$row['breakdown']."</td>
-                                            <td>".$row['busbar']."</td>
-                                            <td>".$row['target_ppc']."</td>
-                                            <td>".$row['target_eng']."</td>
-                                            <td>".$row['design_pic']."</td>
-                                            <td>".$row['design_start']."</td>
-                                            <td>".$row['design_end']."</td>
-                                            <td>".$row['nesting_pic']."</td>
-                                            <td>".$row['nesting_start']."</td>
-                                            <td>".$row['nesting_end']."</td>
-                                            <td>".$row['program_pic']."</td>
-                                            <td>".$row['program_start']."</td>
-                                            <td>".$row['program_end']."</td>
-                                            <td>".$row['checker_pic']."</td>
-                                            <td>".$row['checker_start']."</td>
-                                            <td>".$row['checker_end']."</td>
-                                            <td>".$row['tgl_box_selesai']."</td>
-                                            <td>".$row['due_date']."</td>
-                                            <td>".$row['tgl_terbit_wo']."</td>
-                                            <td>".$row['plan_start_produksi']."</td>
-                                            <td>".$row['aktual_start_produksi']."</td>
-                                            <td>".$row['plan_fg_wo']."</td>
-                                            <td>".$row['aktual_fg_wo']."</td>
-                                            <td>".$row['progress']."</td>
-                                            <td>".$row['desc_progress']."</td>
-                                            <td>".$row['status']."</td>
-                                            <td>".$row['delivery_no']."</td>
-                                            <td>".$row['delivery_tgl']."</td>
-                                            <td>".$row['keterangan']."</td>
-                                            <td>".$row['keterangan']."</td>   
+                                            <td>" . $row['id'] . "</td>
+                                            <td>" . $row['no_jo'] . "</td>
+                                            <td>" . $row['tgl_jo'] . "</td>
+                                            <td>" . $row['nama_project'] . "</td>
+                                            <td>" . $row['kode_gbj'] . "</td>
+                                            <td>Rp. " . $row['nilai_harga'] . "</td>
+                                            <td>" . $row['nama_panel'] . "</td>
+                                            <td>" . $row['tipe_jenis'] . "</td>
+                                            <td>" . $row['tipe_fswm'] . "</td>
+                                            <td>" . $row['qty_unit'] . "</td>
+                                            <td>" . $row['qty_cell'] . "</td>
+                                            <td>" . $row['warna'] . "</td>
+                                            <td>" . $row['nomor_wo'] . "</td>
+                                            <td>" . $row['nomor_seri'] . "</td>
+                                            <td>" . $row['size_panel_height'] . "</td>
+                                            <td>" . $row['size_panel_width'] . "</td>
+                                            <td>" . $row['size_panel_deep'] . "</td>
+                                            <td>" . $row['mh_std'] . "</td>
+                                            <td>" . $row['mh_aktual'] . "</td>
+                                            <td>" . $row['tgl_submit_dwg_for_approval'] . "</td>
+                                            <td>" . $row['tgl_approved'] . "</td>
+                                            <td>" . $row['tgl_release_dwg_softcopy'] . "</td>
+                                            <td>" . $row['tgl_release_dwg_hardcopy'] . "</td>
+                                            <td>" . $row['breakdown'] . "</td>
+                                            <td>" . $row['busbar'] . "</td>
+                                            <td>" . $row['target_ppc'] . "</td>
+                                            <td>" . $row['target_eng'] . "</td>
+                                            <td>" . $row['design_pic'] . "</td>
+                                            <td>" . $row['design_start'] . "</td>
+                                            <td>" . $row['design_end'] . "</td>
+                                            <td>" . $row['nesting_pic'] . "</td>
+                                            <td>" . $row['nesting_start'] . "</td>
+                                            <td>" . $row['nesting_end'] . "</td>
+                                            <td>" . $row['program_pic'] . "</td>
+                                            <td>" . $row['program_start'] . "</td>
+                                            <td>" . $row['program_end'] . "</td>
+                                            <td>" . $row['checker_pic'] . "</td>
+                                            <td>" . $row['checker_start'] . "</td>
+                                            <td>" . $row['checker_end'] . "</td>
+                                            <td>" . $row['tgl_box_selesai'] . "</td>
+                                            <td>" . $row['due_date'] . "</td>
+                                            <td>" . $row['tgl_terbit_wo'] . "</td>
+                                            <td>" . $row['plan_start_produksi'] . "</td>
+                                            <td>" . $row['aktual_start_produksi'] . "</td>
+                                            <td>" . $row['plan_fg_wo'] . "</td>
+                                            <td>" . $row['aktual_fg_wo'] . "</td>
+                                            <td>" . $row['progress'] . "</td>
+                                            <td>" . $row['desc_progress'] . "</td>
+                                            <td>" . $row['status'] . "</td>
+                                            <td>" . $row['delivery_no'] . "</td>
+                                            <td>" . $row['delivery_tgl'] . "</td>
+                                            <td>" . $row['keterangan'] . "</td>
+                                            <td><a href='#' class='btn btn-danger btn-circle'>
+                                                    <i class='fas fa-trash'></i>
+                                                </a>
+                                            </td>   
                                             </tr>";
                                         }
                                         ?>
@@ -197,7 +199,7 @@ require_once 'header.php';
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include("footer.php") ?>
+            <?php include ("footer.php") ?>
             <!-- End of Footer -->
 
         </div>
