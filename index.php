@@ -1,5 +1,14 @@
 <?php
 require_once 'header.php';
+
+// Query untuk mengambil total pendapatan
+$query = "SELECT SUM(nilai_harga) AS total_pendapatan FROM data_monitoring";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
+$total_pendapatan = $row['total_pendapatan'];
+
+// Format angka ke dalam format mata uang
+$total_pendapatan_formatted = number_format($total_pendapatan);
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +42,7 @@ require_once 'header.php';
     <div id="wrapper">
 
         <!-- Ini Sidebar -->
-        <?php include("sidebar.php") ?>
+        <?php include ("sidebar.php") ?>
         <!-- Batas Akhir Sidebar -->
 
         <!-- Content Wrapper -->
@@ -43,7 +52,7 @@ require_once 'header.php';
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include("top-bar.php") ?>
+                <?php include ("top-bar.php") ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -66,8 +75,9 @@ require_once 'header.php';
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Pendapatan (Bulanan)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                Total Harga Project</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp.
+                                                <?php echo $total_pendapatan_formatted; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -77,7 +87,7 @@ require_once 'header.php';
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Earnings (Monthly) Card Example
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
@@ -93,9 +103,9 @@ require_once 'header.php';
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Earnings (Monthly) Card Example
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
@@ -122,7 +132,7 @@ require_once 'header.php';
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -153,7 +163,7 @@ require_once 'header.php';
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Tinjauan Pendapatan</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Tinjauan Project</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -184,7 +194,7 @@ require_once 'header.php';
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Sumber Pendapatan</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Tipe Panel</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -207,13 +217,10 @@ require_once 'header.php';
                                     </div>
                                     <div class="mt-4 text-center small">
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
+                                            <i class="fas fa-circle" style="color: rgba(255, 99, 132, 1);"></i> FS
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
+                                            <i class="fas fa-circle" style="color: rgba(54, 162, 235, 1);"></i> WM
                                         </span>
                                     </div>
                                 </div>
@@ -381,7 +388,7 @@ require_once 'header.php';
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                <?php include("footer.php") ?>
+                <?php include ("footer.php") ?>
                 <!-- End of Footer -->
 
             </div>
@@ -409,8 +416,8 @@ require_once 'header.php';
         <script src="vendor/chart.js/Chart.min.js"></script>
 
         <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+        <script src="js/chart-area.js"></script>
+        <script src="js/chart-pie.js"></script>
 
 </body>
 

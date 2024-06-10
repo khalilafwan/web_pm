@@ -1,9 +1,9 @@
-// Set new default font family and font color to mimic Bootstrap's default styling
+// Mengatur font family default baru dan warna font untuk meniru gaya default Bootstrap
 (Chart.defaults.global.defaultFontFamily = "Nunito"),
   '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = "#858796";
 
-// Function to fetch data and initialize the chart
+// Fungsi untuk mengambil data dan menginisialisasi grafik
 function getData() {
   $.ajax({
     type: "GET",
@@ -15,7 +15,7 @@ function getData() {
       let monitoring = JSON.parse(response);
       console.log(monitoring);
 
-      // Month names array
+      // Array nama bulan
       const monthNames = [
         "Jan",
         "Feb",
@@ -31,7 +31,7 @@ function getData() {
         "Dec",
       ];
 
-      // Map month numbers to names
+      // Memetakan angka bulan ke nama bulan
       let bulan = monitoring.map(function (item) {
         return monthNames[item.month - 1]; // Convert month number to month name
       });
@@ -43,7 +43,7 @@ function getData() {
       console.log(bulan);
       console.log(jumlah_project);
 
-      // Initialize the chart with the fetched data
+      // Inisialisasi grafik dengan data yang diambil
       var ctx = document.getElementById("myAreaChart");
       var myLineChart = new Chart(ctx, {
         type: "line",
@@ -144,5 +144,5 @@ function getData() {
   });
 }
 
-// Call the function to fetch data and initialize the chart
+// Panggil fungsi untuk mengambil data dan menginisialisasi grafik
 getData();
