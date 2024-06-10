@@ -118,7 +118,6 @@
                     <a class="collapse-item" href="tables-pengguna.php">Daftar Pengguna</a>
                     <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="register.php">Tambah Pengguna</a>
-                    <a class="collapse-item" href="tables-konsesi.php">Edit Pengguna</a>
                 </div>
             </div>
         </li>
