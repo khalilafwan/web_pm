@@ -224,22 +224,10 @@ if (isset($_POST["submit"])) {
                                     <div class="card-body">
                                         <label class="control-label col-sm-4">Status</label>
                                         <div class="col-sm-8">
-                                            <!-- <button class="btn btn-primary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            Choose
-                                        </button> -->
-                                            <div class="dropdown-menu animated--fade-in"
-                                                aria-labelledby="dropdownMenuButton">
+                                            <select name="status" id="akses_id" class="form-control" required>
                                                 <option value="Open">Open</option>
                                                 <option value="Close">Close</option>
-                                                <a class="dropdown-item" value="Open">Open</a>
-                                                <a class="dropdown-item" value="Close">Close</a>
-                                            </div>
-                                            <!-- <select name="status">
-                                            <option value="Open">Open</option>
-                                            <option value="Close">Close</option>
-                                        </select> -->
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

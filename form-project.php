@@ -168,8 +168,11 @@ if (isset($_POST["submit"])) {
                                     <div class="card-body">
                                         <label class="control-label col-sm-4">TIPE FS/WM</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control" placeholder="Masukkan Tipe FS/WM"
-                                                name="tipe_fswm">
+                                            <select name="akses_id" id="akses_id" class="form-control"
+                                                placeholder="Masukkan Tipe FS/WM" name="tipe_fswm" required>
+                                                <option value="FS">FS</option>
+                                                <option value="WM">WM</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -339,26 +342,6 @@ if (isset($_POST["submit"])) {
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">BREAKDOWN</label>
-                                    <div class="col-sm-8">
-                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                            placeholder="Date End">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3">
-                                <div class="card-body">
-                                    <label class="control-label col-sm-4">TGL Pasang</label>
-                                    <div class="col-sm-8">
-                                        <input type="date" class="date-end ml-5 form-control datepicker col-sm-8"
-                                            placeholder="Date End">
-                                    </div>
-                                </div>
-                            </div> -->
 
                                 <div class="card mb-4 py-3">
                                     <div class="card-body">
