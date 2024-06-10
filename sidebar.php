@@ -29,8 +29,6 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
             <div class="sidebar-brand-icon">
-                <!-- <link rel="icon" href="./img/PM.ico"> -->
-                <!-- <i class="fas fa-laugh-wink"></i> -->
                 <img src="./img/pm_favico.png" width="27px"></img>
             </div>
             <div class="sidebar-brand-text mx-3"><img src="./img/logoPM.png"></img></div>
@@ -101,7 +99,6 @@
                     <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
                     <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="form-konsesi.php">Input Data</a> <?php } ?>
-                    <!-- <a class="collapse-item" href="tables-konsesi.php">Export</a> -->
                 </div>
             </div>
         </li>
@@ -122,8 +119,6 @@
                     <h6 class="collapse-header">Fungsi:</h6>
                     <a class="collapse-item" href="register.php">Tambah Pengguna</a>
                     <a class="collapse-item" href="tables-konsesi.php">Edit Pengguna</a>
-                    <a class="collapse-item" href="tables-konsesi.php">Daftar Organisasi</a>
-                    <a class="collapse-item" href="tables-konsesi.php">Detil Organisasi</a>
                 </div>
             </div>
         </li>
