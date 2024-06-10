@@ -66,12 +66,23 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="tables-monitoring.php">Tables</a>
                     <h6 class="collapse-header">Fungsi:</h6>
-                    <a class="collapse-item" href="import-project.php">Import Project</a>
-                    <a class="collapse-item" href="form-project.php">Input Project</a>
-                    <a class="collapse-item" href="form-design.php">Input Design</a>
-                    <a class="collapse-item" href="form-nesting.php">Input Nesting</a>
-                    <a class="collapse-item" href="form-program.php">Input Program</a>
-                    <a class="collapse-item" href="form-checker.php">Input Checker</a>
+                    <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
+                    <a class="collapse-item" href="import-project.php">Import Project</a> <?php } ?>
+
+                    <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
+                    <a class="collapse-item" href="form-project.php">Input Project</a> <?php } ?>
+
+                    <?php if (in_array("design",$_SESSION['admin_akses'])) { ?>
+                    <a class="collapse-item" href="form-design.php">Input Design</a> <?php } ?>
+
+                    <?php if (in_array("nesting",$_SESSION['admin_akses'])) { ?>
+                    <a class="collapse-item" href="form-nesting.php">Input Nesting</a> <?php } ?>
+
+                    <?php if (in_array("program",$_SESSION['admin_akses'])) { ?>
+                    <a class="collapse-item" href="form-program.php">Input Program</a> <?php } ?>
+
+                    <?php if (in_array("checker",$_SESSION['admin_akses'])) { ?>
+                    <a class="collapse-item" href="form-checker.php">Input Checker</a> <?php } ?>
                     <!-- <a class="collapse-item" href="tables-monitoring.php">Export</a> -->
                 </div>
             </div>
@@ -87,8 +98,9 @@
             <div id="collapseKonsesi" class="collapse" aria-labelledby="headingKonsesi" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="tables-konsesi.php">Tables</a>
+                    <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
                     <h6 class="collapse-header">Fungsi:</h6>
-                    <a class="collapse-item" href="form-konsesi.php">Input Data</a>
+                    <a class="collapse-item" href="form-konsesi.php">Input Data</a> <?php } ?>
                     <!-- <a class="collapse-item" href="tables-konsesi.php">Export</a> -->
                 </div>
             </div>
