@@ -52,30 +52,12 @@ require_once 'header.php';
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Profile</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Buat Laporan</a>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
 
                         <div class="container-xl px-4 mt-4">
-                            <!-- Account page navigation-->
-                            <!-- <nav class="nav nav-borders">
-                                <a class="nav-link active ms-0"
-                                    href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details"
-                                    target="__blank">Profile</a>
-                                <a class="nav-link"
-                                    href="https://www.bootdey.com/snippets/view/bs5-profile-billing-page"
-                                    target="__blank">Billing</a>
-                                <a class="nav-link"
-                                    href="https://www.bootdey.com/snippets/view/bs5-profile-security-page"
-                                    target="__blank">Security</a>
-                                <a class="nav-link"
-                                    href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"
-                                    target="__blank">Notifications</a>
-                            </nav>
-                            <hr class="mt-0 mb-4"> -->
                             <div class="row">
 
                                 <div class="col">
@@ -103,12 +85,8 @@ require_once 'header.php';
                                                         placeholder="Enter your role"
                                                         value="<?php echo $data['role']; ?>" readonly>
                                                 </div>
-                                                <button class="btn btn-primary" type="button">Save changes</button>
                                             </form>
                                         </div>
-                                        <!-- Save changes button-->
-                                        <button class="btn btn-primary" type="button">Save changes</button>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
