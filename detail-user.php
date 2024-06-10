@@ -83,117 +83,76 @@ require_once 'header.php';
                                     <div class="card mb-4">
                                         <div class="card-header">Account Details</div>
                                         <div class="card-body">
+                                            <?php
+                                            include 'koneksi.php';
+                                            $username = $_SESSION['admin_username'];
+                                            $query = "SELECT a.username, m.nama AS role FROM admin a JOIN admin_akses aa ON a.login_id = aa.login_id JOIN master_akses m ON aa.akses_id = m.akses_id WHERE a.username = '$username'";
+                                            $result = mysqli_query($conn, $query);
+                                            $data = mysqli_fetch_assoc($result);
+                                            ?>
                                             <form>
-                                                <!-- Form Group (username)-->
                                                 <div class="mb-3">
-                                                    <label class="small mb-1" for="inputUsername">Username (how your
-                                                        name will appear to other users on the site)</label>
+                                                    <label class="small mb-1" for="inputUsername">Username</label>
                                                     <input class="form-control" id="inputUsername" type="text"
-                                                        placeholder="Enter your username" value="username">
+                                                        placeholder="Enter your username"
+                                                        value="<?php echo $data['username']; ?>" readonly>
                                                 </div>
-                                                <!-- Form Row-->
-                                                <div class="row gx-3 mb-3">
-                                                    <!-- Form Group (first name)-->
-                                                    <div class="col-md-6">
-                                                        <label class="small mb-1" for="inputFirstName">First
-                                                            name</label>
-                                                        <input class="form-control" id="inputFirstName" type="text"
-                                                            placeholder="Enter your first name" value="Valerie">
-                                                    </div>
-                                                    <!-- Form Group (last name)-->
-                                                    <div class="col-md-6">
-                                                        <label class="small mb-1" for="inputLastName">Last name</label>
-                                                        <input class="form-control" id="inputLastName" type="text"
-                                                            placeholder="Enter your last name" value="Luna">
-                                                    </div>
-                                                </div>
-                                                <!-- Form Row        -->
-                                                <div class="row gx-3 mb-3">
-                                                    <!-- Form Group (organization name)-->
-                                                    <div class="col-md-6">
-                                                        <label class="small mb-1" for="inputOrgName">Organization
-                                                            name</label>
-                                                        <input class="form-control" id="inputOrgName" type="text"
-                                                            placeholder="Enter your organization name"
-                                                            value="Start Bootstrap">
-                                                    </div>
-                                                    <!-- Form Group (location)-->
-                                                    <div class="col-md-6">
-                                                        <label class="small mb-1" for="inputLocation">Location</label>
-                                                        <input class="form-control" id="inputLocation" type="text"
-                                                            placeholder="Enter your location" value="San Francisco, CA">
-                                                    </div>
-                                                </div>
-                                                <!-- Form Group (email address)-->
                                                 <div class="mb-3">
-                                                    <label class="small mb-1" for="inputEmailAddress">Email
-                                                        address</label>
-                                                    <input class="form-control" id="inputEmailAddress" type="email"
-                                                        placeholder="Enter your email address" value="name@example.com">
+                                                    <label class="small mb-1" for="inputRole">Role</label>
+                                                    <input class="form-control" id="inputRole" type="text"
+                                                        placeholder="Enter your role"
+                                                        value="<?php echo $data['role']; ?>" readonly>
                                                 </div>
-                                                <!-- Form Row-->
-                                                <div class="row gx-3 mb-3">
-                                                    <!-- Form Group (phone number)-->
-                                                    <div class="col-md-6">
-                                                        <label class="small mb-1" for="inputPhone">Phone number</label>
-                                                        <input class="form-control" id="inputPhone" type="tel"
-                                                            placeholder="Enter your phone number" value="555-123-4567">
-                                                    </div>
-                                                    <!-- Form Group (birthday)-->
-                                                    <div class="col-md-6">
-                                                        <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                                        <input class="form-control" id="inputBirthday" type="text"
-                                                            name="birthday" placeholder="Enter your birthday"
-                                                            value="06/10/1988">
-                                                    </div>
-                                                </div>
-                                                <!-- Save changes button-->
                                                 <button class="btn btn-primary" type="button">Save changes</button>
                                             </form>
                                         </div>
+                                        <!-- Save changes button-->
+                                        <button class="btn btn-primary" type="button">Save changes</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <!-- Content Row -->
-
                 </div>
-                <!-- End of Main Content -->
 
-                <!-- Footer -->
-                <?php include("footer.php") ?>
-                <!-- End of Footer -->
+                <!-- Content Row -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <?php include("footer.php") ?>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
