@@ -72,7 +72,7 @@ require_once 'header.php';
                                         <th>ID Login</th>
                                         <th>Username</th>
                                         <th>Password</th>
-                                        <!-- <th>Aksi</th> -->
+                                        <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -85,6 +85,10 @@ require_once 'header.php';
                                             <td>".$row['login_id']."</td>
                                             <td>".$row['username']."</td>
                                             <td>".$row['password']."</td>
+                                            <td><a href='#' class='btn btn-danger btn-circle'>
+                                                    <i class='fas fa-trash'></i>
+                                                </a>
+                                            </td> 
                                             </tr>";
                                         }
                                         ?>

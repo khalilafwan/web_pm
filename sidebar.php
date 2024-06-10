@@ -108,7 +108,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="tables-pengguna.php">Daftar Pengguna</a>
                     <h6 class="collapse-header">Fungsi:</h6>
-                    <a class="collapse-item" href="register1.php">Tambah Pengguna</a>
+                    <a class="collapse-item" href="register.php">Tambah Pengguna</a>
                     <a class="collapse-item" href="tables-konsesi.php">Edit Pengguna</a>
                     <a class="collapse-item" href="tables-konsesi.php">Daftar Organisasi</a>
                     <a class="collapse-item" href="tables-konsesi.php">Detil Organisasi</a>

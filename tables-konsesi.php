@@ -86,6 +86,7 @@ require_once 'header.php';
                                         <th>TGL Matrial Dtg</th>
                                         <th>TGL Pasang</th>
                                         <th>Keterangan</th>
+                                        <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -112,6 +113,10 @@ require_once 'header.php';
                                             <td>".$row['tgl_matrial_dtg']."</td>
                                             <td>".$row['tgl_pasang']."</td>
                                             <td>".$row['keterangan']."</td>
+                                            <td><a href='#' class='btn btn-danger btn-circle'>
+                                                    <i class='fas fa-trash'></i>
+                                                </a>
+                                            </td> 
                                             </tr>";
                                         }
                                         ?>
