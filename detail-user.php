@@ -13,7 +13,7 @@ require_once 'header.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PMElectric | Dashboard</title>
+    <title>PMElectric | Profile</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -51,7 +51,7 @@ require_once 'header.php';
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Profile</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Buat Laporan</a>
                     </div>
@@ -61,7 +61,7 @@ require_once 'header.php';
 
                         <div class="container-xl px-4 mt-4">
                             <!-- Account page navigation-->
-                            <nav class="nav nav-borders">
+                            <!-- <nav class="nav nav-borders">
                                 <a class="nav-link active ms-0"
                                     href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details"
                                     target="__blank">Profile</a>
@@ -75,25 +75,10 @@ require_once 'header.php';
                                     href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"
                                     target="__blank">Notifications</a>
                             </nav>
-                            <hr class="mt-0 mb-4">
+                            <hr class="mt-0 mb-4"> -->
                             <div class="row">
-                                <div class="col-xl-4">
-                                    <!-- Profile picture card-->
-                                    <div class="card mb-4 mb-xl-0">
-                                        <div class="card-header">Profile Picture</div>
-                                        <div class="card-body text-center">
-                                            <!-- Profile picture image-->
-                                            <img class="img-account-profile rounded-circle mb-2"
-                                                src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                                            <!-- Profile picture help block-->
-                                            <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5
-                                                MB</div>
-                                            <!-- Profile picture upload button-->
-                                            <button class="btn btn-primary" type="button">Upload new image</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8">
+
+                                <div class="col">
                                     <!-- Account details card-->
                                     <div class="card mb-4">
                                         <div class="card-header">Account Details</div>
