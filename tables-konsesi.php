@@ -95,7 +95,8 @@ require_once 'header.php';
                                         $data = mysqli_query($conn,"select * from konsesi");
                                         while($row = mysqli_fetch_array($data))
                                         {
-                                            echo "<tr>
+                                            echo "
+                                            <tr>
                                             <td>".$row['id_konsesi']."</td>
                                             <td>".$row['jo']."</td>
                                             <td>".$row['wo']."</td>
