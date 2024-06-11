@@ -114,7 +114,7 @@ require_once 'header.php';
                                             <td>".$row['tgl_matrial_dtg']."</td>
                                             <td>".$row['tgl_pasang']."</td>
                                             <td>".$row['keterangan']."</td>
-                                            <td><a href='#' class='btn btn-danger btn-circle'>
+                                            <td><a href='delete-konsesi.php' class='btn btn-danger btn-circle'>
                                                     <i class='fas fa-trash'></i>
                                                 </a>
                                             </td> 

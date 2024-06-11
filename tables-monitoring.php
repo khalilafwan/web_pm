@@ -179,7 +179,7 @@ require_once 'header.php';
                                             <td>" . $row['delivery_no'] . "</td>
                                             <td>" . $row['delivery_tgl'] . "</td>
                                             <td>" . $row['keterangan'] . "</td>
-                                            <td><a href='#' class='btn btn-danger btn-circle'>
+                                            <td><a href='delete-monitoring.php' class='btn btn-danger btn-circle'>
                                                     <i class='fas fa-trash'></i>
                                                 </a>
                                             </td>   
