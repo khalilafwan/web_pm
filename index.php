@@ -76,8 +76,8 @@ $total_pendapatan_formatted = number_format($total_pendapatan);
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Total Harga Project</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp.
-                                                <?php echo $total_pendapatan_formatted; ?></div>
+                                            <div id="liveCounter" class="h5 mb-0 font-weight-bold text-gray-800">Rp. 0
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -418,7 +418,13 @@ $total_pendapatan_formatted = number_format($total_pendapatan);
         <!-- Page level custom scripts -->
         <script src="js/chart-area.js"></script>
         <script src="js/chart-pie.js"></script>
+        <script>
+            // Ambil nilai total pendapatan dari PHP
+            var totalPendapatan = <?php echo $total_pendapatan; ?>;
 
+            // Tampilkan nilai total pendapatan dalam format mata uang
+            document.getElementById("liveCounter").innerHTML = 'Rp. ' + totalPendapatan.toLocaleString();
+        </script>
 </body>
 
 </html>

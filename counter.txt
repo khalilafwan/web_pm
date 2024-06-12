@@ -1,0 +1,20 @@
+<script>
+            // Fungsi untuk menganimasikan live counter
+            function animateValue(id, start, end, duration) {
+                var range = end - start;
+                var current = start;
+                var increment = end > start ? 1 : -1;
+                var stepTime = Math.abs(Math.floor(duration / range));
+                var obj = document.getElementById(id);
+                var timer = setInterval(function () {
+                    current += increment;
+                    obj.innerHTML = 'Rp. ' + current.toLocaleString();
+                    if ((increment === 1 && current >= end) || (increment === -1 && current <= end)) {
+                        clearInterval(timer);
+                    }
+                }, 1); // Mengatur interval menjadi sangat kecil
+            }
+
+            // Panggil fungsi animateValue dengan parameter yang sesuai
+            animateValue("liveCounter", 0, <?php echo $total_pendapatan; ?>, 3000); // Atur durasi sesuai kebutuhan Anda
+        </script>
