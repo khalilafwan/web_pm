@@ -111,15 +111,14 @@ if(isset($_POST['login'])){
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember
                                                     Me</label>
                                             </div>
-                                        </div>
-                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="login" value="Login" />
-
+                                        </div> -->
+                                        
                                         <?php
                                         if ($err) {
                                         echo "<h style='color: red; text-align: center;'>$err</h>";
@@ -132,24 +131,23 @@ if(isset($_POST['login'])){
                                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                             <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                         </a> -->
-                                    </form>
+                                    
                                     <hr>
-                                    <div class="text-center">
+                                    <input type="submit" class="btn btn-primary btn-user btn-block" name="login" value="Login" />
+                                    </form>
+                                    <!-- <div class="text-center">
                                         <a class="small" href="forgot-password.php">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
                                         <a class="small" href="register.php">Create an Account!</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Bootstrap core JavaScript-->
