@@ -32,13 +32,18 @@ require_once 'header.php';
 <body id="page-top">
     <!-- Topbar Navbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-        <div id="datetime">
-            <span id="date"></span><br>
-            <span id="time"></span>
-        </div>
 
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link" id="alertsDropdown">
+                    <div id="datetime" class="no-arrow ml-0">
+                        <span id="date"></span>
+                        <span id="time"></span>
+                    </div>
+                </a>
+            </li>
 
             <div class="topbar-divider d-none d-sm-block"></div>
 

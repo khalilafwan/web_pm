@@ -87,53 +87,6 @@ $total_pendapatan_formatted = number_format($total_pendapatan);
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Pendapatan (Tahunan)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Earnings (Monthly) Card Example
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tugas
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
@@ -419,11 +372,11 @@ $total_pendapatan_formatted = number_format($total_pendapatan);
         <script src="js/chart-area.js"></script>
         <script src="js/chart-pie.js"></script>
         <script>
-            // Ambil nilai total pendapatan dari PHP
-            var totalPendapatan = <?php echo $total_pendapatan; ?>;
+        // Ambil nilai total pendapatan dari PHP
+        var totalPendapatan = <?php echo $total_pendapatan; ?>;
 
-            // Tampilkan nilai total pendapatan dalam format mata uang
-            document.getElementById("liveCounter").innerHTML = 'Rp. ' + totalPendapatan.toLocaleString();
+        // Tampilkan nilai total pendapatan dalam format mata uang
+        document.getElementById("liveCounter").innerHTML = 'Rp. ' + totalPendapatan.toLocaleString();
         </script>
 </body>
 
