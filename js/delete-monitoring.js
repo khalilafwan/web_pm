@@ -9,7 +9,7 @@ $(".btn-delete").click(function () {
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#d33",
-    cancelButtonColor: "#3085d6",
+    cancelButtonColor: "#4e73df",
     confirmButtonText: "Delete",
   }).then((result) => {
     if (result.isConfirmed) {
@@ -24,6 +24,7 @@ $(".btn-delete").click(function () {
             title: "Deleted!",
             text: "Your file has been deleted.",
             icon: "success",
+            confirmButtonColor: "#4e73df",
           }).then(function () {
             // Redirect to tables-monitoring.php after the alert is closed
             window.location.href = "tables-monitoring.php";

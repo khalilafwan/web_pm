@@ -172,7 +172,8 @@ require_once 'crud-monitoring.php';
                 Swal.fire({
                     title: 'Sukses!',
                     text: 'Data Berhasil Ditambahkan',
-                    icon: 'success'
+                    icon: 'success',
+                    confirmButtonColor: '#4e73df'
                 }).then(function() {
                     // Redirect to tables-monitoring.php after the alert is closed
                     window.location.href ='tables-monitoring.php';

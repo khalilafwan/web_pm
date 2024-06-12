@@ -300,7 +300,8 @@ require_once 'crud-konsesi.php';
                 Swal.fire({
                     title: 'Sukses!',
                     text: 'Data Berhasil Ditambahkan',
-                    icon: 'success'
+                    icon: 'success',
+                    confirmButtonColor: '#4e73df'
                 }).then(function() {
                     // Redirect to tables-konsesi.php after the alert is closed
                     window.location.href ='tables-konsesi.php';

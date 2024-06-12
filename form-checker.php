@@ -2,27 +2,6 @@
 require_once 'header.php';
 require_once 'query.php';
 require_once 'crud-monitoring.php';
-
-//cek apakah tombol sudah ditekan
-if (isset($_POST["submit"])) {
-
-    //cek apakah data berhasil ditambahkan
-    if (updateChecker($_POST) > 0) {
-        echo "
-				<script>  
-					alert('Data Berhasil Ditambahkan');
-					document.location.href ='tables-monitoring.php';
-				</script>
-				";
-    } else {
-        echo "
-				<script>  
-					alert('Data Gagal Ditambahkan');
-					document.location.href ='tables-monitoring.php';
-				</script>
-				";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -193,7 +172,8 @@ if (isset($_POST["submit"])) {
                 Swal.fire({
                     title: 'Sukses!',
                     text: 'Data Berhasil Ditambahkan',
-                    icon: 'success'
+                    icon: 'success',
+                    confirmButtonColor: '#4e73df'
                 }).then(function() {
                     // Redirect to tables-monitoring.php after the alert is closed
                     window.location.href ='tables-monitoring.php';
