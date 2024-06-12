@@ -2,27 +2,6 @@
 require_once 'header.php';
 require_once 'query.php';
 require_once 'crud-monitoring.php';
-
-//cek apakah tombol sudah ditekan
-if (isset($_POST["submit"])) {
-
-    //cek apakah data berhasil ditambahkan
-    if (updateNesting($_POST) > 0) {
-        echo "
-				<script>  
-					alert('Data Berhasil Ditambahkan');
-					document.location.href ='tables-monitoring.php';
-				</script>
-				";
-    } else {
-        echo "
-				<script>  
-					alert('Data Gagal Ditambahkan');
-					document.location.href ='tables-monitoring.php';
-				</script>
-				";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -141,7 +120,7 @@ if (isset($_POST["submit"])) {
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light "
+                            <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light"
                                 id="btn-submit">Simpan</button>
                         </div>
                         <input type="hidden" name="action" id="action" value="event_dialog_add_newpartnerdata" />
@@ -154,7 +133,7 @@ if (isset($_POST["submit"])) {
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include("footer.php") ?>
+            <?php include ("footer.php") ?>
             <!-- End of Footer -->
 
         </div>
@@ -175,8 +154,48 @@ if (isset($_POST["submit"])) {
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <?php
+    //cek apakah tombol sudah ditekan
+    if (isset($_POST["submit"])) {
+
+        //cek apakah data berhasil ditambahkan
+        if (updateNesting($_POST) > 0) {
+            echo "
+            <script>  
+                // Display success message using SweetAlert
+                Swal.fire({
+                    title: 'Sukses!',
+                    text: 'Data Berhasil Ditambahkan',
+                    icon: 'success'
+                }).then(function() {
+                    // Redirect to tables-monitoring.php after the alert is closed
+                    window.location.href ='tables-monitoring.php';
+                });
+            </script>
+        ";
+        } else {
+            echo "
+				<script>  
+					// Display success message using SweetAlert
+                Swal.fire({
+                    title: 'Gagal!',
+                    text: 'Data Gagal Ditambahkan',
+                    icon: 'error'
+                }).then(function() {
+                    // Redirect to tables-monitoring.php after the alert is closed
+                    window.location.href ='tables-monitoring.php';
+                });
+				</script>
+				";
+        }
+    }
+    ?>
 </body>
 
 </html>
