@@ -32,6 +32,10 @@ require_once 'header.php';
 <body id="page-top">
     <!-- Topbar Navbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <div id="datetime">
+            <span id="date"></span><br>
+            <span id="time"></span>
+        </div>
 
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
@@ -56,7 +60,7 @@ require_once 'header.php';
                         Settings
                     </a> -->
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
+                    <a class="dropdown-item" href="logout.php" id="logoutLink">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout
                     </a>
@@ -68,26 +72,11 @@ require_once 'header.php';
     </nav>
     <!-- End of Topbar -->
 
+    <!-- Page level plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/date-time.js"></script>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </body>
 
