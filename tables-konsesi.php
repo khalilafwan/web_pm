@@ -86,7 +86,8 @@ require_once 'header.php';
                                             <th>TGL Matrial Dtg</th>
                                             <th>TGL Pasang</th>
                                             <th>Keterangan</th>
-                                            <th>Aksi</th>
+                                            <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
+                                            <th>Aksi</th><?php } ?>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -112,10 +113,14 @@ require_once 'header.php';
                                             <td>" . $row['status'] . "</td>
                                             <td>" . $row['tgl_matrial_dtg'] . "</td>
                                             <td>" . $row['tgl_pasang'] . "</td>
-                                            <td>" . $row['keterangan'] . "</td>
-                                            <td><button type='button' class='btn btn-danger btn-circle btn-delete' data-toggle='modal' data-target='#deleteModal' data-id='{$row['id_konsesi']}'><i class='fas fa-trash'></i>
-                                            </td> 
-                                            </tr>";
+                                            <td>" . $row['keterangan'] . "</td>";
+                                        
+                                            // Check if the user has admin access
+                                            if (in_array("admin", $_SESSION['admin_akses'])) {
+                                            echo"<td><button type='button' class='btn btn-danger btn-circle btn-delete' data-toggle='modal' data-target='#deleteModal' data-id='{$row['id_konsesi']}'><i class='fas fa-trash'></i>
+                                            </td>";
+                                            }
+                                            echo "</tr>";
                                         }
                                         ?>
                                     </tbody>

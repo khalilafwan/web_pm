@@ -37,8 +37,8 @@ require_once 'header.php';
         <ul class="navbar-nav ml-auto">
 
             <li class="nav-item dropdown no-arrow">
-                <a class="nav-link" id="alertsDropdown">
-                    <div id="datetime" class="no-arrow ml-0">
+                <a class="nav-link">
+                    <div id="datetime">
                         <span id="date"></span>
                         <span id="time"></span>
                     </div>
