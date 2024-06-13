@@ -86,7 +86,7 @@ require_once 'header.php';
                                             <th>TGL Matrial Dtg</th>
                                             <th>TGL Pasang</th>
                                             <th>Keterangan</th>
-                                            <?php if (in_array("admin",$_SESSION['admin_akses'])) { ?>
+                                            <?php if ($_SESSION['role'] == 'admin') { ?>
                                             <th>Aksi</th><?php } ?>
                                         </tr>
                                     </thead>
@@ -116,8 +116,8 @@ require_once 'header.php';
                                             <td>" . $row['keterangan'] . "</td>";
                                         
                                             // Check if the user has admin access
-                                            if (in_array("admin", $_SESSION['admin_akses'])) {
-                                            echo"<td><button type='button' class='btn btn-danger btn-circle btn-delete' data-toggle='modal' data-target='#deleteModal' data-id='{$row['id_konsesi']}'><i class='fas fa-trash'></i>
+                                            if ($_SESSION['role'] == 'admin') {
+                                                echo"<td><button type='button' class='btn btn-danger btn-circle btn-delete' data-toggle='modal' data-target='#deleteModal' data-id='{$row['id_konsesi']}'><i class='fas fa-trash'></i>
                                             </td>";
                                             }
                                             echo "</tr>";

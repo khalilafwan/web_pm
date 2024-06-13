@@ -1,6 +1,29 @@
 <?php
-require_once 'header.php';
+require_once 'header.php'; // Sertakan file header.php yang berisi session start dan koneksi database
+
+// Pastikan sesi pengguna sudah dimulai, jika belum redirect ke halaman login
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Ambil username dari sesi yang aktif
+$username = $_SESSION['username'];
+
+// Lakukan query untuk mengambil data username dan role dari tabel user
+$query = "SELECT username, nama, role FROM user WHERE username = '$username'";
+$result = mysqli_query($conn, $query);
+
+// Periksa apakah query berhasil dieksekusi
+if ($result) {
+    // Ambil hasil query sebagai array asosiatif
+    $data = mysqli_fetch_assoc($result);
+} else {
+    echo "Error fetching data: " . mysqli_error($conn);
+    exit();
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,23 +89,22 @@ require_once 'header.php';
                                         <div class="card-header">Account Details</div>
                                         <div class="card-body">
                                             <?php
-                                            include 'koneksi.php';
-                                            $username = $_SESSION['admin_username'];
-                                            $query = "SELECT a.username, m.nama AS role FROM admin a JOIN admin_akses aa ON a.login_id = aa.login_id JOIN master_akses m ON aa.akses_id = m.akses_id WHERE a.username = '$username'";
-                                            $result = mysqli_query($conn, $query);
-                                            $data = mysqli_fetch_assoc($result);
+                                            
                                             ?>
                                             <form>
                                                 <div class="mb-3">
                                                     <label class="small mb-1" for="inputUsername">Username</label>
                                                     <input class="form-control" id="inputUsername" type="text"
-                                                        placeholder="Enter your username"
                                                         value="<?php echo $data['username']; ?>" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="small mb-1" for="inputNama">Nama</label>
+                                                    <input class="form-control" id="inputNama" type="text"
+                                                        value="<?php echo $data['nama']; ?>" readonly>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="small mb-1" for="inputRole">Role</label>
                                                     <input class="form-control" id="inputRole" type="text"
-                                                        placeholder="Enter your role"
                                                         value="<?php echo $data['role']; ?>" readonly>
                                                 </div>
                                             </form>

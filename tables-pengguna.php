@@ -1,6 +1,7 @@
 <?php
 require_once 'header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,18 +78,16 @@ require_once 'header.php';
                                     </thead>
                                     <tbody>
                                         <?php
-                                        include 'koneksi.php';
-                                        $data = mysqli_query($conn,"select * from admin");
+                                        $data = mysqli_query($conn,"select * from user");
                                         while($row = mysqli_fetch_array($data))
                                         {
                                             echo "<tr>
-                                            <td>".$row['login_id']."</td>
+                                            <td>".$row['id']."</td>
                                             <td>".$row['username']."</td>
                                             <td>".$row['password']."</td>
-                                            <td><a href='#' class='btn btn-danger btn-circle'>
-                                                    <i class='fas fa-trash'></i>
-                                                </a>
+                                            <td><button type='button' class='btn btn-danger btn-circle btn-delete' data-toggle='modal' data-target='#deleteModal' data-id='{$row['id']}'><i class='fas fa-trash'></i>
                                             </td> 
+                                            
                                             </tr>";
                                         }
                                         ?>
@@ -132,10 +131,14 @@ require_once 'header.php';
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="DataTables/datatables.min.js"></script>
+    <script src="js/delete-pengguna.js"></script>
+
 
 </body>
 

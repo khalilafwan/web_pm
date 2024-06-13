@@ -301,25 +301,13 @@ return mysqli_affected_rows($conn);
 
 }
 
-function inputdataregister($data)
+
+function hapusPengguna($id)
 {
 global $conn;
-$login_id = htmlspecialchars($data["login_id"]);
-$username = htmlspecialchars($data["username"]);
-$password = htmlspecialchars($data["password"]);
-$nama = htmlspecialchars($data["nama"]);
-$akses_id = htmlspecialchars($data["akses_id"]);
-
-
-$query = "INSERT INTO admin
-(login_id,username,password,akses_id,nama)
-VALUES
-('$login_id', '$username', '$password','$akses_id','$nama')";
-mysqli_query($conn, $query);
+mysqli_query($conn, "DELETE FROM user WHERE id = '$id'");
 return mysqli_affected_rows($conn);
-
 }
-
 
 
 ?>

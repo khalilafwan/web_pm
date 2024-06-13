@@ -1,101 +1,88 @@
 <?php
 session_start();
-if (isset($_SESSION['admin_username'])) {
+if (isset($_SESSION['username'])) {
     header("location:index.php");
+    exit();
 }
-require_once 'koneksi.php';
+require_once 'koneksi.php'; // Ensure this file correctly sets up $conn
 require_once 'query.php';
 require_once 'crud-monitoring.php';
 
 $username = "";
 $password = "";
 $err = "";
-if(isset($_POST['login'])){
+
+if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if($username == '' or $password == ''){
+
+    if ($username == '' || $password == '') {
         $err .= "<p>Silahkan Masukkan username dan password</p>";
     }
+
     if (empty($err)) {
-        $sql1 = "select * from admin where username = '$username'";
-        $q1 = mysqli_query($conn, $sql1);
-    
-        if ($q1) {
-            // Check if any rows were returned
-            if (mysqli_num_rows($q1) > 0) {
-                $r1 = mysqli_fetch_array($q1);
+        $sql = "SELECT * FROM user WHERE username = ?";
+        $stmt = mysqli_prepare($conn, $sql);
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "s", $username);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            if ($result && mysqli_num_rows($result) > 0) {
+                $user = mysqli_fetch_assoc($result);
                 
-                if ($r1['password'] != md5($password)) {
+                // // Debugging: Output fetched data
+                // echo "<p>Username: " . htmlspecialchars($user['username']) . "</p>";
+                // echo "<p>Hashed password from DB: " . htmlspecialchars($user['password']) . "</p>";
+                // echo "<p>Input password: " . htmlspecialchars($password) . "</p>";
+
+                if (password_verify($password, $user['password'])) {
+                    // Password is correct
+                    $_SESSION['username'] = $username;
+                    $_SESSION['role'] = $user['role'];
+                    header("location:index.php");
+                    exit();
+                } else {
+                    // Password is incorrect
                     $err .= "<p>Password Salah</p>";
                 }
             } else {
                 $err .= "<p>Akun tidak ditemukan</p>";
             }
+
+            mysqli_stmt_close($stmt);
         } else {
-            // Handle query error, e.g., display an error message or log it
             $err .= "<p>Error executing the query: " . mysqli_error($conn) . "</p>";
         }
     }
-    if (empty($err)) {
-        $login_id = $r1['login_id'];
-        $sql1 = "select * from admin_akses where login_id = '$login_id'";
-        $q1 = mysqli_query($conn, $sql1);
-        while ($r1 = mysqli_fetch_array($q1)) {
-            $akses[] = $r1['akses_id']; 
-        }
-        if (empty($akses)) {
-            $err .= "<li>Kamu tidak punya akses ke halaman admin</li>";
-        }
-    }
-    if (empty($err)) {
-        $_SESSION['admin_username'] = $username;
-        $_SESSION['admin_akses'] = $akses;
-        header("location:index.php");
-        exit();
-    }
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>PMElectric | Login</title>
-
-    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
-    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="icon" href="./img/pm_favico.png">
-
 </head>
 
 <body class="bg-gradient-primary">
-
     <div class="container">
-
-        <!-- Outer Row -->
         <div class="row justify-content-center">
-
             <div class="col-xl-5 col-lg-8 col-md-9">
-
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -105,42 +92,22 @@ if(isset($_POST['login'])){
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Username" value="<?php echo $username ?>" name="username">
+                                                placeholder="Username"
+                                                value="<?php echo htmlspecialchars($username); ?>" name="username">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
-                                        <!-- <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div> -->
-                                        
                                         <?php
                                         if ($err) {
-                                        echo "<h style='color: red; text-align: center;'>$err</h>";
+                                            echo "<h style='color: red; text-align: center;'>$err</h>";
                                         }
                                         ?>
-                                        <!-- <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a> -->
-                                    
-                                    <hr>
-                                    <input type="submit" class="btn btn-primary btn-user btn-block" name="login" value="Login" />
+                                        <hr>
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="login"
+                                            value="Login" />
                                     </form>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="forgot-password.php">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.php">Create an Account!</a>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -149,17 +116,10 @@ if(isset($_POST['login'])){
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
 </body>
 
 </html>
