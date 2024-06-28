@@ -86,7 +86,7 @@ if ($result) {
                                 <div class="col">
                                     <!-- Account details card-->
                                     <div class="card mb-4">
-                                        <div class="card-header">Account Details</div>
+                                        <div class="card-header">Detail User</div>
                                         <div class="card-body">
                                             <?php
                                             
