@@ -4,7 +4,7 @@ if (isset($_SESSION['username'])) {
     header("location:index.php");
     exit();
 }
-require_once 'koneksi.php'; // Ensure this file correctly sets up $conn
+require_once 'koneksi.php';
 require_once 'query.php';
 require_once 'crud-monitoring.php';
 
@@ -30,11 +30,6 @@ if (isset($_POST['login'])) {
 
             if ($result && mysqli_num_rows($result) > 0) {
                 $user = mysqli_fetch_assoc($result);
-                
-                // // Debugging: Output fetched data
-                // echo "<p>Username: " . htmlspecialchars($user['username']) . "</p>";
-                // echo "<p>Hashed password from DB: " . htmlspecialchars($user['password']) . "</p>";
-                // echo "<p>Input password: " . htmlspecialchars($password) . "</p>";
 
                 if (password_verify($password, $user['password'])) {
                     // Password is correct
